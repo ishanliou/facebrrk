@@ -31,14 +31,18 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div className="App">
-      {this.state.pets.map((pet => {
-        <h1>{pet.name}</h1>
-        {JSON.stringify(this.state, null, 4)}
-      }))}
+      
         <Home />
         <SearchBar />
+        {this.state.pets.map((pet => (
+        <h1 key={pet.id}>{pet.name} | {this.state.breed}</h1>   
+        
+        
+      )     
+      ))}
       </div>
     );
   }
