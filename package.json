@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "dotenv": "^6.0.0",
+    "jsonp": "^0.2.1",
     "npm": "^6.1.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
