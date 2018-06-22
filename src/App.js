@@ -15,8 +15,8 @@ class App extends Component {
     super(props);
     this.state ={
       animal: 'dog',
-      breed: 'Havanese',
-      location: 'San Francisco, CA',
+      breed: 'English Bulldog',
+      location: 'Los Angeles, CA',
       pets: []
     }
   }
@@ -41,7 +41,7 @@ class App extends Component {
         
         {this.state.pets.map((pet => (
         <h4 key={pet.id}>
-          Name: {pet.name} 
+          <div> Name: {pet.name} </div>
           <img src={pet.media.photos.photo[2].value} />
         </h4>         
         
