@@ -31,20 +31,27 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.pets)
+    console.log(this.state)
     return (
+      
       <div className="App">
       
         <Home />
         <SearchBar />
+        
         {this.state.pets.map((pet => (
-        <h4 key={pet.id}>Name: {pet.name} , Age; {pet.age} , Size: {pet.size} , Sex: {pet.sex}</h4>         
+        <h4 key={pet.id}>
+          Name: {pet.name} 
+          <img src={pet.media.photos.photo[2].value} />
+        </h4>         
+        
       )     
       ))}
 
-
       </div>
     );
+
+    
   }
 }
 
