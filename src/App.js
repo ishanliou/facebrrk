@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
-
 import Home from './components/Home';
+import BarkDetails from './components/BarkDetails';
 import SearchBar from './components/SearchBar';
 import petfinder from './petfinder-client'
 import credentials from './credentials'
@@ -38,15 +38,7 @@ class App extends Component {
       
         <Home />
         <SearchBar />
-        
-        {this.state.pets.map((pet => (
-        <h4 key={pet.id}>
-          <div> Name: {pet.name} </div>
-          <img src={pet.media.photos.photo[2].value} />
-        </h4>         
-        
-      )     
-      ))}
+        <BarkDetails bark={this.state.pets} breed={this.state.breed} location={this.state.location}/>
 
       </div>
     );
