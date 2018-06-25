@@ -15,7 +15,7 @@ class App extends Component {
     super(props);
     this.state ={
       animal: 'dog',
-      breed: 'English Bulldog',
+      breed: 'Corgi',
       location: 'Los Angeles, CA',
       pets: []
     }
@@ -38,7 +38,9 @@ class App extends Component {
       
         <Home />
         <SearchBar />
-        <BarkDetails bark={this.state.pets} breed={this.state.breed} location={this.state.location}/>
+        <BarkDetails bark={this.state.pets} 
+                     breed={this.state.breed} 
+                     location={this.state.location}/>
 
       </div>
     );
