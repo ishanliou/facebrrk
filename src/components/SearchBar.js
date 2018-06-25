@@ -20,17 +20,24 @@ class SearchBar extends Component {
           })
       }
 
-    searchBreed() {
+    searchBreed(e) {
         console.log('yay')
-        
     }
     render() {
         return(
             <div>
                 <label>Breed: </label>
                 <input className="search-bar" 
-                    placeholder="search a pet..." 
-                    onChange={this.searchBreed.bind(this)}/>
+                       type="text" 
+                       list="breed-list"
+                       placeholder="search a pet..." 
+                       onChange={this.searchBreed.bind(this)}/>
+                <datalist id="breed-list">
+                    {this.state.breeds.map((breed) => 
+                        <option key={breed} value={breed} />
+                    )}
+                    
+                </datalist>
 
             </div>
         )

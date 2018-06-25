@@ -37,7 +37,9 @@ class App extends Component {
       <div className="App">
       
         <Home />
-        <SearchBar />
+        <SearchBar animal={this.state.animal}
+                   breed={this.state.breed}
+                   bark={this.state.pets}/>
         <BarkDetails bark={this.state.pets} 
                      breed={this.state.breed} 
                      location={this.state.location}/>
