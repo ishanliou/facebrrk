@@ -22,8 +22,7 @@ class SearchBar extends Component {
       }
 
     updateBreed(e) {
-        console.log(e.target.value)
-        this.setState({value: e.target.value})
+        this.props.changeBreed(e.target.value)
     }
 
     render() {

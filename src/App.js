@@ -8,6 +8,7 @@ import petfinder from './petfinder-client'
 import credentials from './credentials'
 
 const petFinderKey = petfinder(credentials)
+const pf = petfinder()
 
 class App extends Component {
 
@@ -15,19 +16,28 @@ class App extends Component {
     super(props);
     this.state ={
       animal: 'dog',
-      breed: 'Corgi',
+      breed: '',
       location: 'Los Angeles, CA',
       pets: []
     }
   }
 
-  componentDidMount() {
+  componentDidMount () {
+    this.search()
+  }
+
+  search () {
     const { animal, breed, location } = this.state
-    const promise = petFinderKey.pet.find({animal, breed, location, output: 'full'})
+    const promise = pf.pet.find({animal, breed, location, output: 'full'})
     promise.then((data) => {
-      const pets =data.petfinder.pets ? data.petfinder.pets.pet : []
+      const pets = data.petfinder.pets ?  data.petfinder.pets.pet : []
       this.setState({pets})
+      console.log(data)
     })
+  }
+  
+  changeBreed (breed) {
+    this.setState({ breed }, () => this.search())
   }
 
   render() {
@@ -39,7 +49,7 @@ class App extends Component {
         <Home />
         <SearchBar animal={this.state.animal}
                    breed={this.state.breed}
-                   bark={this.state.pets}/>
+                   changeBreed={this.changeBreed.bind(this)}/>
         <BarkDetails bark={this.state.pets} 
                      breed={this.state.breed} 
                      location={this.state.location}/>
