@@ -6,7 +6,6 @@ const pf = petfinder()
 class SearchBar extends Component {
     state = {
         breeds: [],
-        value: ""
     }
 
     componentDidMount () {
@@ -33,12 +32,12 @@ class SearchBar extends Component {
                        type="text" 
                        list="breed-list"
                        placeholder="search a breed..." 
-                       onChange={this.updateBreed.bind(this)}/>
+                       onChange={this.updateBreed.bind(this)}
+                />
                 <datalist id="breed-list">
                         {this.state.breeds.map((breed) => 
                             <option key={breed} value={breed}/>
-                        )}
-                    
+                        )}                  
                 </datalist>
 
             </div>

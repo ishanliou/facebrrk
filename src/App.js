@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import Home from './components/Home';
-import BarkDetails from './components/BarkDetails';
-import SearchBar from './components/SearchBar';
+import Home from './components/Home'
+import BarkDetails from './components/BarkDetails'
+import SearchBar from './components/SearchBar'
+import SearchLocation from './components/SearchLocation'
 import petfinder from './petfinder-client'
 import credentials from './credentials'
 
@@ -35,10 +36,14 @@ class App extends Component {
       console.log(data)
     })
   }
-  
+
   changeBreed (breed) {
     this.setState({ breed }, () => this.search())
   }
+
+changeLocation (location) {
+  this.setState({location} , () => this.search())
+}
 
   render() {
     console.log(this.state)
@@ -50,6 +55,8 @@ class App extends Component {
         <SearchBar animal={this.state.animal}
                    breed={this.state.breed}
                    changeBreed={this.changeBreed.bind(this)}/>
+        <SearchLocation changeLocation={this.changeLocation.bind(this)}
+                        location={this.state.location}/>
         <BarkDetails bark={this.state.pets} 
                      breed={this.state.breed} 
                      location={this.state.location}/>
