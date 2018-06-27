@@ -53,7 +53,7 @@ const request = function (method, opts) {
   let newOpts = {key, format: 'json'}
   newOpts = Object.assign(newOpts, opts)
   const url = URL.format({
-    protocol: 'http',
+    protocol: 'https://',
     host: BASE_URL,
     query: newOpts,
     pathname: method
