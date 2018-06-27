@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import Home from './components/Home'
-import BarkDetails from './components/BarkDetails'
+import BarkList from './components/BarkList'
 import SearchBar from './components/SearchBar'
 import SearchLocation from './components/SearchLocation'
 import petfinder from './petfinder-client'
@@ -57,7 +57,7 @@ changeLocation (location) {
                    changeBreed={this.changeBreed.bind(this)}/>
         <SearchLocation changeLocation={this.changeLocation.bind(this)}
                         location={this.state.location}/>
-        <BarkDetails bark={this.state.pets} 
+        <BarkList bark={this.state.pets} 
                      breed={this.state.breed} 
                      location={this.state.location}/>
 
