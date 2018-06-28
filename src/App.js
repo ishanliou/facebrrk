@@ -5,6 +5,7 @@ import Home from './components/Home'
 import BarkList from './components/BarkList'
 import SearchBar from './components/SearchBar'
 import SearchLocation from './components/SearchLocation'
+import Gender from './components/Gender'
 import petfinder from './petfinder-client'
 import credentials from './credentials'
 
@@ -18,6 +19,7 @@ class App extends Component {
     this.state ={
       animal: 'dog',
       breed: '',
+      sex: '',
       location: 'Los Angeles, CA',
       pets: []
     }
@@ -28,8 +30,8 @@ class App extends Component {
   }
 
   search () {
-    const { animal, breed, location } = this.state
-    const promise = pf.pet.find({animal, breed, location, output: 'full'})
+    const { animal, breed, location, sex } = this.state
+    const promise = pf.pet.find({animal, breed, location, sex, output: 'full'})
     promise.then((data) => {
       const pets = data.petfinder.pets ?  data.petfinder.pets.pet : []
       this.setState({pets})
@@ -45,6 +47,10 @@ changeLocation (location) {
   this.setState({location} , () => this.search())
 }
 
+changeGender (sex) {
+  this.setState({ sex } , () => this.search())
+}
+
   render() {
     console.log(this.state)
     return (
@@ -57,6 +63,7 @@ changeLocation (location) {
                    changeBreed={this.changeBreed.bind(this)}/>
         <SearchLocation changeLocation={this.changeLocation.bind(this)}
                         location={this.state.location}/>
+        <Gender changeGender={this.changeGender.bind(this)}/>
         <BarkList bark={this.state.pets} 
                      breed={this.state.breed} 
                      location={this.state.location}/>

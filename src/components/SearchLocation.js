@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import petfinder from '../petfinder-client'
-
-const pf = petfinder()
 
 class SearchLocation extends Component {
 
@@ -19,7 +16,6 @@ class SearchLocation extends Component {
                        placeholder="enter a zipcode near you..." 
                        onChange={this.updateLocation.bind(this)}
                 />
-
             </div>
         )
     }

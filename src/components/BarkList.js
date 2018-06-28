@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 class BarkList extends Component {   
     render(){
         const bark = this.props.bark
-        
         return(
             <div className="BarkDetails">
                 <div>
