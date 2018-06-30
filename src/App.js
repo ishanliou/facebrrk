@@ -6,6 +6,7 @@ import BarkList from './components/BarkList'
 import SearchBar from './components/SearchBar'
 import SearchLocation from './components/SearchLocation'
 import Gender from './components/Gender'
+import ErrorBoundary from './components/ErrorBoundary'
 import petfinder from './petfinder-client'
 import credentials from './credentials'
 
@@ -58,9 +59,11 @@ changeGender (sex) {
       <div className="App">
       
         <Home />
+        <ErrorBoundary>
         <SearchBar animal={this.state.animal}
                    breed={this.state.breed}
                    changeBreed={this.changeBreed.bind(this)}/>
+        </ErrorBoundary>
         <SearchLocation changeLocation={this.changeLocation.bind(this)}
                         location={this.state.location}/>
         <Gender changeGender={this.changeGender.bind(this)}/>
