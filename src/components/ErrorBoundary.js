@@ -10,11 +10,18 @@ class ErrorBoundary extends React.Component {
       // Display fallback UI
       this.setState({ hasError: true });
     }
+
+    refreshPage(){
+      window.location.reload()
+    }
+
   
     render() {
       if (this.state.hasError) {
         // You can render any custom fallback UI
-        return <h1>Something went wrong.</h1>;
+        return <h1>Something went wrong...
+                    <button type="button" onClick={ this.refreshPage.bind(this) }> Try Again </button>
+              </h1>;
       }
       return this.props.children;
     }

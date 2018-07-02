@@ -59,18 +59,19 @@ changeGender (sex) {
       <div className="App">
       
         <Home />
-        <ErrorBoundary>
+        
         <SearchBar animal={this.state.animal}
                    breed={this.state.breed}
                    changeBreed={this.changeBreed.bind(this)}/>
-        </ErrorBoundary>
+        
         <SearchLocation changeLocation={this.changeLocation.bind(this)}
                         location={this.state.location}/>
         <Gender changeGender={this.changeGender.bind(this)}/>
+        <ErrorBoundary>
         <BarkList bark={this.state.pets} 
                      breed={this.state.breed} 
                      location={this.state.location}/>
-
+        </ErrorBoundary>
       </div>
     );
 
