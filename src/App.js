@@ -23,12 +23,14 @@ class App extends Component {
       breed: '',
       sex: '',
       location: 'Los Angeles, CA',
-      pets: []
+      pets: [],
+      randomPets: []
     }
   }
 
   componentDidMount () {
     this.search()
+    this.random()
   }
 
   search () {
@@ -37,6 +39,16 @@ class App extends Component {
     promise.then((data) => {
       const pets = data.petfinder.pets ?  data.petfinder.pets.pet : []
       this.setState({pets})
+      // console.log(data)
+    })
+  }
+
+  random () {
+    const { animal, breed, location, sex } = this.state
+    const promise = pf.pet.getRandom({animal, breed, location, sex, output: 'full'})
+    promise.then((data) => {
+      const  randomPets = data.petfinder.randomPets ?  data.petfinder.pets.pet : []
+      this.setState({randomPets})
       console.log(data)
     })
   }
@@ -51,6 +63,10 @@ changeLocation (location) {
 
 changeGender (sex) {
   this.setState({ sex } , () => this.search())
+}
+
+getRandomPet (randomPets) {
+  this.setState({randomPets} , () => this.random())
 }
 
   render() {
@@ -68,11 +84,12 @@ changeGender (sex) {
         <SearchLocation changeLocation={this.changeLocation.bind(this)}
                         location={this.state.location}/>
         <Gender changeGender={this.changeGender.bind(this)}/>
-        <RandomBark />
+        <RandomBark getRandomPet={this.getRandomPet.bind(this)}/>
         <ErrorBoundary>
-          <BarkList bark={this.state.pets} 
-                    breed={this.state.breed} 
-                    location={this.state.location}/>
+        <BarkList bark={this.state.pets} 
+                  breed={this.state.breed} 
+                  location={this.state.location}
+                  randomPets={this.state.randomPets}/>
         </ErrorBoundary>
         
       </div>

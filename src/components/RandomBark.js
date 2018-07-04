@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 
 class RandomBark extends Component {
+
+    updateRandom(e) {
+        console.log('yay')
+        this.props.getRandomPet(e.target.value)
+    }
+
     render() {
         return(
             <div>
@@ -9,6 +15,7 @@ class RandomBark extends Component {
                        type="text"
                        list="zodiac-list"
                        placeholder="Find a Brrk match your Zodiac Sing"
+                       onChange={this.updateRandom.bind(this)}
                 />
                 <datalist id="zodiac-list">
                     <option value="Aquarius"/>
