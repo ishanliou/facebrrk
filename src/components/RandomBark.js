@@ -10,7 +10,7 @@ class RandomBark extends Component {
     render() {
         return(
             <div>
-                <label>Find the Match: </label>
+                <label>Match: </label>
                 <input className="search-bar"
                        type="text"
                        list="zodiac-list"
