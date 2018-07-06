@@ -73,25 +73,26 @@ getRandomPet (randomPets) {
     console.log(this.state)
     return (
       
-      <div className="App">
-      
-        <Home />
-        
-        <SearchBar animal={this.state.animal}
-                   breed={this.state.breed}
-                   changeBreed={this.changeBreed.bind(this)}/>
-        
-        <SearchLocation changeLocation={this.changeLocation.bind(this)}
-                        location={this.state.location}/>
-        <Gender changeGender={this.changeGender.bind(this)}/>
-        <RandomBark getRandomPet={this.getRandomPet.bind(this)}/>
-        <ErrorBoundary>
-        <BarkList bark={this.state.pets} 
-                  breed={this.state.breed} 
-                  location={this.state.location}
-                  randomPets={this.state.randomPets}/>
-        </ErrorBoundary>
-        
+      <div className="App">        
+        <div className="side">
+          <Home />
+          <SearchBar animal={this.state.animal}
+                    breed={this.state.breed}
+                    changeBreed={this.changeBreed.bind(this)}/>
+          
+          <SearchLocation changeLocation={this.changeLocation.bind(this)}
+                          location={this.state.location}/>
+          <Gender changeGender={this.changeGender.bind(this)}/>
+          <RandomBark getRandomPet={this.getRandomPet.bind(this)}/>
+        </div>
+        <div className="main-container">
+          <ErrorBoundary>
+            <BarkList bark={this.state.pets} 
+                      breed={this.state.breed} 
+                      location={this.state.location}
+                      randomPets={this.state.randomPets}/>
+            </ErrorBoundary>
+        </div>
       </div>
     );
 

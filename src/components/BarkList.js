@@ -10,11 +10,11 @@ class BarkList extends Component {
                     {bark.map((pet => (
                         <h4 key={pet.id}>
                             <div>Name: {pet.name} </div>
-                            <div>Age: {pet.age} </div>
+                            {/* <div>Age: {pet.age} </div>
                             <div>Sex: {pet.sex}</div>
                             <div>Breed: {pet.breeds.breed}</div>
                             <div>Location: {pet.contact.city}, {pet.contact.state} {pet.contact.zip}</div>
-                            <div>Description: {pet.description}</div>
+                            <div>Description: {pet.description}</div> */}
                             <img src={pet.media.photos.photo[2].value} alt="" />
                         </h4>)     
                 ))}
