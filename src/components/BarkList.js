@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { BrowserRouter as Router, Link } from 'react-router-dom' 
 
 
 class BarkList extends Component {   
@@ -10,12 +11,16 @@ class BarkList extends Component {
                     {bark.map((pet => (
                         <h4 key={pet.id}>
                             <div>Name: {pet.name} </div>
-                            {/* <div>Age: {pet.age} </div>
+                            <div>Age: {pet.age} </div>
                             <div>Sex: {pet.sex}</div>
                             <div>Breed: {pet.breeds.breed}</div>
                             <div>Location: {pet.contact.city}, {pet.contact.state} {pet.contact.zip}</div>
-                            <div>Description: {pet.description}</div> */}
+                            {/* <div>Description: {pet.description}</div> */}
+                            <Router>
+                            <Link to={`/${pet.id}`}>
                             <img src={pet.media.photos.photo[2].value} alt="" />
+                            </Link>
+                            </Router>
                         </h4>)     
                 ))}
                 </div>

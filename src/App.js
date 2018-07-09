@@ -20,7 +20,7 @@ class App extends Component {
     super(props);
     this.state ={
       animal: 'dog',
-      breed: '',
+      breed: 'French Bulldog',
       sex: '',
       location: 'Los Angeles, CA',
       pets: [],
@@ -73,7 +73,7 @@ getRandomPet (randomPets) {
     console.log(this.state)
     return (
       
-      <div className="App">        
+      <div className="App">       
         <div className="side">
           <Home />
           <SearchBar animal={this.state.animal}
