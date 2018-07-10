@@ -34,3 +34,10 @@ body {
   padding-left: 500px;
   padding-right: 50px;
 }
+
+ul {
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+  text-decoration-line: none;
+}

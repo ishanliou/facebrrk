@@ -8,6 +8,7 @@ import SearchLocation from './components/SearchLocation'
 import Gender from './components/Gender'
 import ErrorBoundary from './components/ErrorBoundary'
 import RandomBark from './components/RandomBark'
+import Navbar from './components/Navbar'
 import petfinder from './petfinder-client'
 import credentials from './credentials'
 import { Route, Switch, Redirect, Link } from 'react-router-dom' 
@@ -76,6 +77,8 @@ getRandomPet (randomPets) {
       
       <div className="App">       
         <div className="side">
+          <Navbar />
+
           <h1 className="title">Find Your Brrk</h1>
           <SearchBar animal={this.state.animal}
                     breed={this.state.breed}
