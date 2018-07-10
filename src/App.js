@@ -9,6 +9,7 @@ import Gender from './components/Gender'
 import ErrorBoundary from './components/ErrorBoundary'
 import RandomBark from './components/RandomBark'
 import Navbar from './components/Navbar'
+import About from './components/About'
 import petfinder from './petfinder-client'
 import credentials from './credentials'
 import { Route, Switch, Redirect, Link } from 'react-router-dom' 
@@ -75,34 +76,51 @@ class App extends Component {
     console.log(this.state)
     return (
       
-      <div className="App">       
-        <div className="side">
-          <Navbar />
+      <div className="App"> 
+        <Route exact path="/" component={ Home } /> 
+        <Route path="/home" component={ Home } />
+        <Route path="/about" component={ About } />
+        <Route exact path="/findbrrk" render={()=> {
+          return ( 
+            <ErrorBoundary>
+              <BarkList  bark={this.state.pets} 
+                              breed={this.state.breed} 
+                              location={this.state.location}
+                              andomPets={this.state.randomPets} />
+            </ErrorBoundary>
+          )                              
+        }} />
 
-          <h1 className="title">Find Your Brrk</h1>
-          <SearchBar animal={this.state.animal}
-                    breed={this.state.breed}
-                    changeBreed={this.changeBreed.bind(this)}/>
-          
-          <SearchLocation changeLocation={this.changeLocation.bind(this)}
-                          location={this.state.location}/>
-          <Gender changeGender={this.changeGender.bind(this)}/>
-          <RandomBark getRandomPet={this.getRandomPet.bind(this)}/>
-        </div>
+             
+      <div className="side">
+        <Navbar />
+  
+        <Route exact path="/findbrrk" render={()=> {
+          return (
+            <div>
+              <h1 className="title">Find Your Brrk</h1>
+              <SearchBar  animal={this.state.animal}
+                          breed={this.state.breed}
+                          changeBreed={this.changeBreed.bind(this)} />
+              <SearchLocation changeLocation={this.changeLocation.bind(this)}
+                              location={this.state.location} />                 
+              <Gender changeGender={this.changeGender.bind(this)}/>
+              <RandomBark getRandomPet={this.getRandomPet.bind(this)} />
+            </div>
+          )
+        }} /> 
+      </div>
 
-        <div className="main-container">
-
-          <Route exact={true} path="/" component={Home}/>
-
-          <ErrorBoundary>
+        {/* <div className="main-container"> */}
+          {/* <ErrorBoundary>
             <BarkList bark={this.state.pets} 
                       breed={this.state.breed} 
                       location={this.state.location}
                       randomPets={this.state.randomPets}/>
-            </ErrorBoundary>
+            </ErrorBoundary> */}
 
             
-        </div>
+        {/* </div> */}
       </div>
     );
 
