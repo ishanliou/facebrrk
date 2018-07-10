@@ -94,6 +94,7 @@ class App extends Component {
              
       <div className="side">
         <Navbar />
+        <p>Love is where the brrk is</p>
   
         <Route exact path="/findbrrk" render={()=> {
           return (
