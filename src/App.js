@@ -59,17 +59,17 @@ class App extends Component {
     this.setState({ breed }, () => this.search())
   }
 
-changeLocation (location) {
-  this.setState({location} , () => this.search())
-}
+  changeLocation (location) {
+    this.setState({location} , () => this.search())
+  }
 
-changeGender (sex) {
-  this.setState({ sex } , () => this.search())
-}
+  changeGender (sex) {
+    this.setState({ sex } , () => this.search())
+  }
 
-getRandomPet (randomPets) {
-  this.setState({randomPets} , () => this.random())
-}
+  getRandomPet (randomPets) {
+    this.setState({randomPets} , () => this.random())
+  }
 
   render() {
     console.log(this.state)
