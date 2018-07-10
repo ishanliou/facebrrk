@@ -10,6 +10,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 import RandomBark from './components/RandomBark'
 import petfinder from './petfinder-client'
 import credentials from './credentials'
+import { Route, Switch, Redirect, Link } from 'react-router-dom' 
 
 const petFinderKey = petfinder(credentials)
 const pf = petfinder()
@@ -75,7 +76,7 @@ getRandomPet (randomPets) {
       
       <div className="App">       
         <div className="side">
-          <Home />
+          <h1 className="title">Find Your Brrk</h1>
           <SearchBar animal={this.state.animal}
                     breed={this.state.breed}
                     changeBreed={this.changeBreed.bind(this)}/>
@@ -85,13 +86,19 @@ getRandomPet (randomPets) {
           <Gender changeGender={this.changeGender.bind(this)}/>
           <RandomBark getRandomPet={this.getRandomPet.bind(this)}/>
         </div>
+
         <div className="main-container">
+
+          <Route exact={true} path="/" component={Home}/>
+
           <ErrorBoundary>
             <BarkList bark={this.state.pets} 
                       breed={this.state.breed} 
                       location={this.state.location}
                       randomPets={this.state.randomPets}/>
             </ErrorBoundary>
+
+            
         </div>
       </div>
     );
