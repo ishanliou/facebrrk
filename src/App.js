@@ -13,6 +13,7 @@ import About from './components/About'
 import petfinder from './petfinder-client'
 import credentials from './credentials'
 import { Route, Switch, Redirect, Link } from 'react-router-dom' 
+import BarkDetsils from './components/BarkDetails';
 
 const petFinderKey = petfinder(credentials)
 const pf = petfinder()
@@ -86,11 +87,17 @@ class App extends Component {
               <BarkList  bark={this.state.pets} 
                               breed={this.state.breed} 
                               location={this.state.location}
-                              andomPets={this.state.randomPets} />
+                              randomPets={this.state.randomPets} />
             </ErrorBoundary>
           )                              
         }} />
-
+        <Route path="/findbrrk/:petId" render={(route) => {
+          // console.log(route.match.params.petId)
+          const petId = route.match.params.petId
+          return(
+            <BarkDetsils petId={ petId }/>
+          )
+        }}/>
              
       <div className="side">
         <Navbar />
@@ -109,6 +116,8 @@ class App extends Component {
             </div>
           )
         }} /> 
+
+        
       </div>
 
         {/* <div className="main-container"> */}

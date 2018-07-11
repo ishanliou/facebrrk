@@ -15,8 +15,8 @@ class RandomBark extends Component {
                        type="text"
                        list="zodiac-list"
                        placeholder="Find a Brrk match your Zodiac Sing"
-                       onChange={this.updateRandom.bind(this)}
-                />
+                       onChange={this.updateRandom.bind(this)}/>
+
                 <datalist id="zodiac-list">
                     <option value="Aquarius"/>
                     <option value="Pisces"/>
@@ -30,7 +30,6 @@ class RandomBark extends Component {
                     <option value="Scorpio"/>
                     <option value="Sagittarius"/>
                     <option value="Capricorn"/>
-
                 </datalist>
                 
             </div>
