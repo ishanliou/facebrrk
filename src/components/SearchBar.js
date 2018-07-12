@@ -11,14 +11,15 @@ class SearchBar extends Component {
     componentDidMount () {
         this.getNewBreeds(this.props.animal)
       }
-      getNewBreeds (animal) {
-        pf.breed.list({animal})
-          .then((data) => {
-            if (data.petfinder.breeds) {
-              this.setState({breeds: data.petfinder.breeds.breed})
-            }
-          })
-      }
+      
+    getNewBreeds (animal) {
+    pf.breed.list({animal})
+        .then((data) => {
+        if (data.petfinder.breeds) {
+            this.setState({breeds: data.petfinder.breeds.breed})
+        }
+        })
+    }
 
     updateBreed(e) {
         this.props.changeBreed(e.target.value)
