@@ -24,7 +24,7 @@ class App extends Component {
     super(props);
     this.state ={
       animal: 'dog',
-      breed: 'French Bulldog',
+      breed: 'Havanese',
       sex: '',
       location: 'Los Angeles, CA',
       pets: [],
@@ -78,60 +78,50 @@ class App extends Component {
     return (
       
       <div className="App"> 
-        <Route exact path="/" component={ Home } /> 
-        <Route path="/home" component={ Home } />
-        <Route path="/about" component={ About } />
-        <Route exact path="/findbrrk" render={()=> {
-          return ( 
-            <ErrorBoundary>
-              <BarkList  bark={this.state.pets} 
-                              breed={this.state.breed} 
-                              location={this.state.location}
-                              randomPets={this.state.randomPets} />
-            </ErrorBoundary>
-          )                              
-        }} />
-        <Route path="/findbrrk/:petId" render={(route) => {
-          // console.log(route.match.params.petId)
-          const petId = route.match.params.petId
-          return(
-            <BarkDetsils petId={ petId }/>
-          )
-        }}/>
-             
-      <div className="side">
-        <Navbar />
-        <p>Love is where the brrk is</p>
+        <div className="main-container item">
+          <Route exact path="/" component={ Home } /> 
+          <Route path="/home" component={ Home } />
+          <Route path="/about" component={ About } />
   
-        <Route exact path="/findbrrk" render={()=> {
-          return (
-            <div>
-              <h1 className="title">Find Your Brrk</h1>
-              <SearchBar  animal={this.state.animal}
-                          breed={this.state.breed}
-                          changeBreed={this.changeBreed.bind(this)} />
-              <SearchLocation changeLocation={this.changeLocation.bind(this)}
-                              location={this.state.location} />                 
-              <Gender changeGender={this.changeGender.bind(this)}/>
-              <RandomBark getRandomPet={this.getRandomPet.bind(this)} />
-            </div>
-          )
-        }} /> 
+          <Route exact path="/findbrrk" render={()=> {
+            return ( 
+              <ErrorBoundary>
+                <BarkList  bark={this.state.pets} 
+                                breed={this.state.breed} 
+                                location={this.state.location}
+                                randomPets={this.state.randomPets} />
+              </ErrorBoundary>
+            )                              
+          }} />
+          <Route path="/findbrrk/:petId" render={(route) => {
+            // console.log(route.match.params.petId)
+            const petId = route.match.params.petId
+            return(
+              <BarkDetsils petId={ petId }/>
+            )
+          }}/>
+        </div>
 
-        
+        <div className="side item">
+          <Navbar />
+            <div className="tag-line">Love is where the brrk is</div>
+    
+          <Route exact path="/findbrrk" render={()=> {
+            return (
+              <div>
+                <h1 className="title">Find Your Brrk</h1>
+                <SearchBar  animal={this.state.animal}
+                            breed={this.state.breed}
+                            changeBreed={this.changeBreed.bind(this)} />
+                <SearchLocation changeLocation={this.changeLocation.bind(this)}
+                                location={this.state.location} />                 
+                <Gender changeGender={this.changeGender.bind(this)}/>
+                <RandomBark getRandomPet={this.getRandomPet.bind(this)} />
+              </div>
+            )
+          }} /> 
       </div>
-
-        {/* <div className="main-container"> */}
-          {/* <ErrorBoundary>
-            <BarkList bark={this.state.pets} 
-                      breed={this.state.breed} 
-                      location={this.state.location}
-                      randomPets={this.state.randomPets}/>
-            </ErrorBoundary> */}
-
-            
-        {/* </div> */}
-      </div>
+    </div>
     );
 
     
