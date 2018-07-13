@@ -51,7 +51,7 @@ class BarkDetsils extends Component {
                  <div></div>
                  {/* <div>photo: {this.state.media}</div> */}
                 </div>
-            
+            <button>Go Back </button>
             </div>
         )
     }

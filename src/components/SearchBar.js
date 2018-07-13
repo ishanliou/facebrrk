@@ -27,7 +27,7 @@ class SearchBar extends Component {
 
     render() {
         return(
-            <div>
+            <div className="search-field">
                 <label className="label">Breed: </label>
                 <input className="search-bar" 
                        type="text" 

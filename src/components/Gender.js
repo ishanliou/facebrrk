@@ -8,7 +8,7 @@ class Gender extends Component {
     
     render() {
         return(
-            <div>
+            <div className="search-field">
                 <label className="label">Gender: </label>
                 <input className="search-bar" 
                        type="text" 

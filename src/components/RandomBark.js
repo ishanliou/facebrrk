@@ -9,12 +9,12 @@ class RandomBark extends Component {
 
     render() {
         return(
-            <div>
+            <div className="search-field">
                 <label className="label">Match: </label>
                 <input className="search-bar"
                        type="text"
                        list="zodiac-list"
-                       placeholder="Find a Brrk match your Zodiac Sing"
+                       placeholder="Match your zodiac sign..."
                        onChange={this.updateRandom.bind(this)}/>
 
                 <datalist id="zodiac-list">

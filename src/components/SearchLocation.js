@@ -9,7 +9,7 @@ class SearchLocation extends Component {
 
     render(){
         return(
-            <div>
+            <div className="search-field">
                 <label className="label">Location: </label>
                 <input className="search-bar" 
                        type="text" 

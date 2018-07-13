@@ -83,7 +83,7 @@ class App extends Component {
 
           <div className="tag-line">Love is where the brrk is</div>
     
-          <Route exact path="/findbrrk" render={()=> {
+          <Route  path="/findbrrk" render={()=> {
             return (
               <div>
                 <h1 className="title">Find Your Brrk</h1>

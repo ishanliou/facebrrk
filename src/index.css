@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  padding: 0;
+  padding-top: 100px;
+  padding-bottom: 200px;
   font-family: 'Open Sans', sans-serif;
 }
 .App {
@@ -28,15 +29,18 @@ body {
 }
 
 .search-bar {
-  width: 60%;
+  width: 70%;
   height: 70px;
   border: none;
   border-bottom: solid 1px #365899;
   font-size: 16px;
-  padding: 3px 30px;
-  line-height: 24px;
   font-weight: 300;
   background-color:#f0faf8 ;
+}
+
+.search-field{
+  width: 100%;
+  padding: 0px 30px 0px 30px;
 }
 
 ::placeholder {
@@ -49,8 +53,13 @@ body {
 
 .label {
   color: #4a68a7;
+  width: 30%;
+  height: 70px;
+  line-height: 70px;
+  text-align: right;
+  margin: 0;
+  padding:0px 12px 0px 0px;
 }
-
 
 ul {
   list-style-type: none;
@@ -64,5 +73,12 @@ ul {
 }
 
 .tag-line {
-  font-weight: 400;
+  font-weight: 300;
+  color: #777d87;
+  margin: 20px;
+}
+
+.BarkDetails {
+  color: #233762;
+  font-weight: 300;
 }
