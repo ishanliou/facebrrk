@@ -77,8 +77,29 @@ class App extends Component {
     console.log(this.state)
     return (
       
-      <div className="App"> 
-        <div className="main-container item">
+      <div className="App">
+        <div className="side column">
+          <Navbar />
+
+          <div className="tag-line">Love is where the brrk is</div>
+    
+          <Route exact path="/findbrrk" render={()=> {
+            return (
+              <div>
+                <h1 className="title">Find Your Brrk</h1>
+                <SearchBar  animal={this.state.animal}
+                            breed={this.state.breed}
+                            changeBreed={this.changeBreed.bind(this)} />
+                <SearchLocation changeLocation={this.changeLocation.bind(this)}
+                                location={this.state.location} />                 
+                <Gender changeGender={this.changeGender.bind(this)}/>
+                <RandomBark getRandomPet={this.getRandomPet.bind(this)} />
+              </div>
+            )
+            }} /> 
+          </div>
+
+        <div className="main-container column">
           <Route exact path="/" component={ Home } /> 
           <Route path="/home" component={ Home } />
           <Route path="/about" component={ About } />
@@ -102,25 +123,7 @@ class App extends Component {
           }}/>
         </div>
 
-        <div className="side item">
-          <Navbar />
-            <div className="tag-line">Love is where the brrk is</div>
-    
-          <Route exact path="/findbrrk" render={()=> {
-            return (
-              <div>
-                <h1 className="title">Find Your Brrk</h1>
-                <SearchBar  animal={this.state.animal}
-                            breed={this.state.breed}
-                            changeBreed={this.changeBreed.bind(this)} />
-                <SearchLocation changeLocation={this.changeLocation.bind(this)}
-                                location={this.state.location} />                 
-                <Gender changeGender={this.changeGender.bind(this)}/>
-                <RandomBark getRandomPet={this.getRandomPet.bind(this)} />
-              </div>
-            )
-          }} /> 
-      </div>
+        
     </div>
     );
 

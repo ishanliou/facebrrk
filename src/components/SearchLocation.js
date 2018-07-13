@@ -10,7 +10,7 @@ class SearchLocation extends Component {
     render(){
         return(
             <div>
-                <label>Location: </label>
+                <label className="label">Location: </label>
                 <input className="search-bar" 
                        type="text" 
                        placeholder="enter a zipcode near you..." 
