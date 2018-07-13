@@ -35,6 +35,11 @@ class BarkDetsils extends Component {
         })
     }
 
+    goBack () {
+        console.log('yay')
+        window.history.back()
+    }
+
     render() {
         const thisPet = this.state.selectedPet
         return(
@@ -51,7 +56,7 @@ class BarkDetsils extends Component {
                  <div></div>
                  {/* <div>photo: {this.state.media}</div> */}
                 </div>
-            <button>Go Back </button>
+            <button onClick={this.goBack.bind(this)}>Go Back </button>
             </div>
         )
     }
