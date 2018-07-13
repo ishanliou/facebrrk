@@ -36,7 +36,6 @@ class BarkDetsils extends Component {
     }
 
     goBack () {
-        console.log('yay')
         window.history.back()
     }
 
