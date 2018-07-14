@@ -43,19 +43,23 @@ class BarkDetsils extends Component {
         const thisPet = this.state.selectedPet
         return(
             <div className="BarkDetails">
-                <div>
-                 <div>Age: {thisPet.age}</div>
-                 <div>Breed: {this.state.petBreed[0]} | {this.state.petBreed[1]}</div>
-                 <div>Description: {thisPet.description}</div>
-                 <div>Id: {thisPet.id}</div>
+                <div className="bark-info">
                  <div>Name: {thisPet.name}</div>
+                 <div>Breed: {this.state.petBreed[0]} | {this.state.petBreed[1]}</div>
+                 <div>Age: {thisPet.age}</div>
+                 <div>Id: {thisPet.id}</div>
                  <div>Gender: {thisPet.sex}</div>
                  <div>Size: {thisPet.size}</div>
+                 <div>Description: {thisPet.description}</div>
+                 
+                 
+                 
+                 
                  <div></div>
                  <div></div>
                  {/* <div>photo: {this.state.media}</div> */}
                 </div>
-            <button onClick={this.goBack.bind(this)}>Go Back </button>
+            <button type="button" className="btn btn-lg btn-dark" onClick={this.goBack.bind(this)}>Go Back </button>
             </div>
         )
     }

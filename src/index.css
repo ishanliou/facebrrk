@@ -22,12 +22,6 @@ body {
   flex-grow: 2.5;
 }
 
-
-.title {
-  color: #365899;
-  font-weight: 600;
-}
-
 .search-bar {
   width: 70%;
   height: 70px;
@@ -45,6 +39,7 @@ body {
 
 ::placeholder {
   color: #4a68a7;
+  padding-left: 20px;
 }
 
 :focus {
@@ -78,7 +73,35 @@ ul {
   margin: 20px;
 }
 
-.BarkDetails {
-  color: #233762;
+.btn {
   font-weight: 300;
+  background-color: #233762;
+}
+
+.btn-lg {
+  width: 200px;
+  margin-top: 50px;
+}
+
+.bark-info {
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  color: #4b4f56;
+  font-weight: 300;
+  line-height: 34px;
+}
+
+.title {
+  font-weight: 400;
+  color: #233762;
+}
+
+.display-barks {
+  color: #4b4f56;
+  font-weight: 300;
+  line-height: 34px;
+  margin: 25px;
+  padding-bottom: 32px;
+  border-bottom: solid 0.5px #c0c2c4;
 }

@@ -9,7 +9,7 @@ class BarkList extends Component {
             <div className="BarkLists">
                 <div>
                     {bark.map((pet => (
-                        <h4 key={pet.id}>
+                        <div className="display-barks" key={pet.id}>
                             <div>Name: {pet.name} </div>
                             <div>Age: {pet.age} </div>
                             <div>Sex: {pet.sex}</div>
@@ -19,7 +19,7 @@ class BarkList extends Component {
                             <Link to={`/findbrrk/${pet.id}`}>
                                 <img src={pet.media.photos.photo[2].value} alt="" />
                             </Link>
-                        </h4>)     
+                        </div>)     
                 ))}
                 </div>
             </div>
