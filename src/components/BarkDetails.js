@@ -53,7 +53,7 @@ class BarkDetsils extends Component {
                  <div>Description: {thisPet.description}</div>
                  
                  
-                 
+    
                  
                  <div></div>
                  <div></div>
