@@ -24,7 +24,7 @@ class App extends Component {
     super(props);
     this.state ={
       animal: 'dog',
-      breed: 'French Bulldog',
+      breed: '',
       sex: '',
       location: 'Los Angeles, CA',
       pets: [],
