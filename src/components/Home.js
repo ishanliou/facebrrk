@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Home extends Component {
-    render(){
+const Home = () => {
         return(
             <div>
                 <img src={`FaceBrrk-about-03.png`} style={{width:'1150px', height:'auto' }} alt="hero-img"/>
             </div>
         )
-    }
 }
 
 export default Home;
