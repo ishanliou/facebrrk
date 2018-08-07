@@ -14,6 +14,7 @@ import petfinder from './petfinder-client'
 import credentials from './credentials'
 import { Route, Switch, Redirect, Link } from 'react-router-dom' 
 import BarkDetsils from './components/BarkDetails';
+import RandomList from './components/RandomList';
 
 const petFinderKey = petfinder(credentials)
 const pf = petfinder()
@@ -100,27 +101,30 @@ class App extends Component {
           </div>
 
         <div className="main-container column">
-          <Route exact path="/" component={ Home } /> 
-          <Route path="/home" component={ Home } />
-          <Route path="/about" component={ About } />
-  
-          <Route exact path="/findbrrk" render={()=> {
-            return ( 
-              <ErrorBoundary>
-                <BarkList  bark={this.state.pets} 
-                                breed={this.state.breed} 
-                                location={this.state.location}
-                                randomPets={this.state.randomPets} />
-              </ErrorBoundary>
-            )                              
-          }} />
-          <Route path="/findbrrk/:petId" render={(route) => {
-            // console.log(route.match.params.petId)
-            const petId = route.match.params.petId
-            return(
-              <BarkDetsils petId={ petId }/>
-            )
-          }}/>
+          <Switch>
+            <Route exact path="/" component={ Home } /> 
+            <Route path="/home" component={ Home } />
+            <Route path="/about" component={ About } />
+    
+            <Route exact path="/findbrrk" render={()=> {
+              return ( 
+                <ErrorBoundary>
+                  <BarkList  bark={this.state.pets} 
+                                  breed={this.state.breed} 
+                                  location={this.state.location}
+                                  randomPets={this.state.randomPets} />
+                </ErrorBoundary>
+              )                              
+            }} />
+            <Route path="/findbrrk/random" component={ RandomList }/>
+            <Route path="/findbrrk/:petId" render={(route) => {
+              // console.log(route.match.params.petId)
+              const petId = route.match.params.petId
+              return(
+                <BarkDetsils petId={ petId }/>
+              )
+            }}/>
+          </Switch>
         </div>
 
         
