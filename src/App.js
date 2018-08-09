@@ -52,9 +52,12 @@ class App extends Component {
     const { animal, breed, location, sex } = this.state
     const promise = pf.pet.getRandom({animal, breed, location, sex, output: 'full'})
     promise.then((data) => {
-      const  randomPets = data.petfinder.randomPets ?  data.petfinder.pets.pet : []
-      this.setState({randomPets})
+      // const  randomPets = data.petfinder.randomPets ?  data.petfinder.pets.pet : []
+      this.setState({
+        randomPets: data.petfinder
+        })
       console.log('randomPets',data)
+      console.log('randomPets@@',data.petfinder)
     })
   }
 
@@ -116,7 +119,10 @@ class App extends Component {
                 </ErrorBoundary>
               )                              
             }} />
-            <Route path="/findbrrk/random" component={ RandomList }/>
+            <Route path="/findbrrk/random" render={() => {
+              return <RandomList randomPets={this.state.randomPets}/>
+            }}/>
+
             <Route path="/findbrrk/:petId" render={(route) => {
               // console.log(route.match.params.petId)
               const petId = route.match.params.petId
