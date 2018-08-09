@@ -54,10 +54,10 @@ class App extends Component {
     promise.then((data) => {
       // const  randomPets = data.petfinder.randomPets ?  data.petfinder.pets.pet : []
       this.setState({
-        randomPets: data.petfinder
+        randomPets: data.petfinder.pet
         })
       console.log('randomPets',data)
-      console.log('randomPets@@',data.petfinder)
+      console.log('randomPets@@',data.petfinder.pet)
     })
   }
 
