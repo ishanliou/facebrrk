@@ -5,13 +5,24 @@ class RandomList extends Component{
     render() {
         const randomPets = this.props.randomPets
         // console.log('ooo', (Object.values(randomPets)[0]))
-        console.log('rrr', (Object.entries(randomPets)[0]))
+        
        console.log('therer', randomPets)
        console.log('breed', (randomPets.breeds))
-       const breed = randomPets.breeds? randomPets.breeds: 'n/a'
+       const breed = randomPets.breeds? randomPets.breeds: ''
        console.log('contact', randomPets.contact)
-       const contact = randomPets.contact? randomPets.contact : 'n/a'
+       const contact = randomPets.contact? randomPets.contact : ''
        console.log("photo", randomPets.media)
+       const photos = randomPets.media? randomPets.media.photos.photo.reduce((acc, photo) => {
+        if (photo['@size'] === 'x') {
+          acc.push(photo.value)
+        }
+        return acc
+      }, []) : []
+      console.log(photos)
+      //  const showPhoto = photos ? Object.entries(photos) : ''
+      //  console.log("showPhoto", showPhoto[0])
+       
+       
         return(
             <div>
                 <div>Name: {randomPets.name}</div>
@@ -25,14 +36,14 @@ class RandomList extends Component{
                   <ul>ZipCode: {contact.zip}</ul>
                   <ul>Email: {contact.email}</ul>
                   <ul>Phone: {contact.phone}</ul>
-                  
-                  </div>
+                </div>
                   
                 <div>Shelter Pet ID: {randomPets.shelterPetId ? randomPets.shelterPetId: "n/a"}</div>
 
                 <div>Shelter ID: {randomPets.shelterId}</div>
-                {/* <div>{randomPets.media.photos.photo[2].value}</div> */}
-
+                <div>{photos.map(petPhotos => (
+                  <img src={petPhotos} />
+                ))}</div>
                 
             </div>
         )
