@@ -6,19 +6,19 @@ class RandomList extends Component{
         const randomPets = this.props.randomPets
         // console.log('ooo', (Object.values(randomPets)[0]))
         
-       console.log('therer', randomPets)
-       console.log('breed', (randomPets.breeds))
+      //  console.log('therer', randomPets)
+      //  console.log('breed', (randomPets.breeds))
        const breed = randomPets.breeds? randomPets.breeds: ''
-       console.log('contact', randomPets.contact)
+      //  console.log('contact', randomPets.contact)
        const contact = randomPets.contact? randomPets.contact : ''
-       console.log("photo", randomPets.media)
+      //  console.log("photo", randomPets.media)
        const photos = randomPets.media? randomPets.media.photos.photo.reduce((acc, photo) => {
         if (photo['@size'] === 'x') {
           acc.push(photo.value)
         }
         return acc
       }, []) : []
-      console.log(photos)
+      // console.log(photos)
       //  const showPhoto = photos ? Object.entries(photos) : ''
       //  console.log("showPhoto", showPhoto[0])
        

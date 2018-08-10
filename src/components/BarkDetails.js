@@ -29,9 +29,9 @@ class BarkDetsils extends Component {
             this.setState({selectedPet})
             this.setState({petBreed})
             this.setState({media})
-            console.log('single', data)
-            console.log('a',selectedPet)
-            console.log('b',petBreed)
+            // console.log('single', data)
+            // console.log('a',selectedPet)
+            // console.log('b',petBreed)
         })
     }
 
