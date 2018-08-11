@@ -17,7 +17,7 @@ class BarkList extends Component {
                             <div>Location: {pet.contact.city}, {pet.contact.state} {pet.contact.zip}</div>
                             {/* <div>Description: {pet.description}</div> */}
                             <Link to={`/findbrrk/${pet.id}`}>
-                                <img src={pet.media.photos.photo[2].value} alt={pet.name} />
+                                <img src={pet.media.photos? pet.media.photos.photo[2].value: null} alt={pet.name} />
                             </Link>
                         </div>)     
                 ))}

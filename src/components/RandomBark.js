@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+// import Select from 'react-select'
 
 class RandomBark extends Component {
 
@@ -21,8 +22,8 @@ class RandomBark extends Component {
                 */}
                <Link to={`/findbrrk/random`}>
                 <select id="zodiac-list" onChange={this.updateRandom.bind(this)} className="search-bar match-select">
-                    <option >Match your zodiac sign</option>
-                    <option value="Aquarius">Aquarius</option>
+                    <option value=""  >Match your zodiac sign...</option>
+                    <option value="Aquarius" className="option-color">Aquarius</option>
                     <option value="Pisces">Pisces</option>
                     <option value="Aries">Aries</option>
                     <option value="Taurus">Taurus</option>

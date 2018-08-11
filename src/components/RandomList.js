@@ -41,8 +41,8 @@ class RandomList extends Component{
                 <div>Shelter Pet ID: {randomPets.shelterPetId ? randomPets.shelterPetId: "n/a"}</div>
 
                 <div>Shelter ID: {randomPets.shelterId}</div>
-                <div>{photos.map(petPhotos => (
-                  <img src={petPhotos} />
+                <div>{photos.map((petPhotos, index )=> (
+                  <img src={petPhotos} key={index}/>
                 ))}</div>
                 
             </div>

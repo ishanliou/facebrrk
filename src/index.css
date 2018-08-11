@@ -30,12 +30,18 @@ body {
   font-size: 16px;
   font-weight: 300;
   background-color:#f0faf8 ;
+  cursor: pointer;
 }
 
 .match-select {
   border-radius:0px !important;
   appearance: none;
+  color: #4a68a7;
+  padding-left: 20px;
+  cursor: pointer;
+  background-color: #f0faf8;
 }
+
 
 .search-field{
   width: 100%;
