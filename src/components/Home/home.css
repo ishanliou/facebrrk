@@ -1,0 +1,10 @@
+.home {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
