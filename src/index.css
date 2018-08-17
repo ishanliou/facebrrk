@@ -6,12 +6,14 @@ body {
 }
 .App {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-direction: row;
 }
 
 .column {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
 }
 
 .side {
