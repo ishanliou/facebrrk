@@ -9,20 +9,37 @@ body {
   flex-direction: row;
 }
 
-.column {
+@media (max-width: 600px) {
+  .App { flex-direction: column;}
+}
+
+/* .column {
   display: flex;
   flex-direction: column;
   height: 100%;
   flex-grow: 1;
-}
+} */
 
 .side {
   background-color: #f0faf8;
   padding-top: 200px;
+  height: auto;
+  display: flex;
+  width: 480px;
+  flex-direction: column;
+  order: 1;
 }
+@media (max-width: 600px) {
+  .side { width: auto;}
+}
+
 .main-container {
   flex-grow: 2.5;
+  flex-direction: column;
+  order: 2;
 }
+
+
 
 .search-bar {
   width: 70%;

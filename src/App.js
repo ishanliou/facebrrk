@@ -80,28 +80,25 @@ class App extends Component {
   render() {
     console.log(this.state)
     return (
-      
       <div className="App">
         <div className="side column">
           <Navbar />
-
-          <div className="tag-line">Love is where the brrk is</div>
-    
-          <Route  path="/findbrrk" render={()=> {
-            return (
-              <div>
-                <h1 className="title">Find Your Brrk</h1>
-                <SearchBar  animal={this.state.animal}
-                            breed={this.state.breed}
-                            changeBreed={this.changeBreed.bind(this)} />
-                <SearchLocation changeLocation={this.changeLocation.bind(this)}
-                                location={this.state.location} />                 
-                <Gender changeGender={this.changeGender.bind(this)}/>
-                <RandomBark getRandomPet={this.getRandomPet.bind(this)} />
-              </div>
-            )
-            }} /> 
-          </div>
+            <div className="tag-line">Love is where the brrk is</div>
+            <Route  path="/findbrrk" render={()=> {
+              return (
+                <div>
+                  <h1 className="title">Find Your Brrk</h1>
+                  <SearchBar  animal={this.state.animal}
+                              breed={this.state.breed}
+                              changeBreed={this.changeBreed.bind(this)} />
+                  <SearchLocation changeLocation={this.changeLocation.bind(this)}
+                                  location={this.state.location} />                 
+                  <Gender changeGender={this.changeGender.bind(this)}/>
+                  <RandomBark getRandomPet={this.getRandomPet.bind(this)} />
+                </div>
+              )}} 
+             /> 
+            </div>
 
         <div className="main-container column">
           <Switch>
