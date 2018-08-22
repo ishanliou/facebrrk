@@ -12,8 +12,8 @@ import Navbar from './components/Navbar'
 import About from './components/About'
 import petfinder from './petfinder-client'
 import credentials from './credentials'
-import { Route, Switch, Redirect, Link } from 'react-router-dom' 
-import BarkDetsils from './components/BarkDetails';
+import { Route, Switch } from 'react-router-dom' 
+import BarkDetsils from './components/BarkDetails/BarkDetails';
 import RandomList from './components/RandomList';
 
 const petFinderKey = petfinder(credentials)
