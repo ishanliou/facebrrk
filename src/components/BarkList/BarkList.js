@@ -11,15 +11,15 @@ class BarkList extends Component {
         {bark.map((pet => (
       <div className="card">
         <Link to={`/findbrrk/${pet.id}`}>
-          <img className="card-img-top text-center" src={pet.media.photos? pet.media.photos.photo[2].value: null} alt={pet.name}/>
+          <img className="card-img-top" src={pet.media.photos? pet.media.photos.photo[2].value: null} alt={pet.name}/>
         </Link>
      
         <div className="card-body">
-          <h5 className="card-title">Name: {pet.name}</h5>
-          <p className="card-text">Age: {pet.age}</p>
-          <p className="card-text">Sex: {pet.sex}</p>
-          <p className="card-text">Breed: {pet.breeds.breed}</p>
-          <p className="card-text">Location: {pet.contact.city}, {pet.contact.state} {pet.contact.zip}</p>
+          <h5 className="card-title">{pet.name}</h5>
+          <h6 className="card-text"><span className="sub-title">Age:</span> {pet.age}</h6>
+          <h6 className="card-text"><span className="sub-title">Sex:</span> {pet.sex}</h6>
+          {/* <p className="card-text">Breed: {pet.breeds.breed}</p> */}
+          <h6 className="card-text"><span className="sub-title">Location:</span> {pet.contact.city}, {pet.contact.state} {pet.contact.zip}</h6>
           {/* <p className="card-text">Description: {pet.description}</p> */}
         </div>
       </div>

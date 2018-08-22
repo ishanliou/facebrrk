@@ -18,3 +18,21 @@
     height: 18rem;
     object-fit: cover;
 }
+
+.card-body {
+    text-align: left;
+}
+
+.card-title {
+    font-weight: 600;
+    color: #233762;
+}
+
+.sub-title {
+    font-weight: 400;
+    color: #233762;
+}
+
+.card-text {
+    font-weight: 300;
+}
