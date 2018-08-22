@@ -17,6 +17,7 @@
     width: 18rem;
     height: 18rem;
     object-fit: cover;
+    border-radius: 0 !important;
 }
 
 .card-body {
@@ -35,4 +36,5 @@
 
 .card-text {
     font-weight: 300;
+    color: #233762;
 }
