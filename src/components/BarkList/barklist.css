@@ -2,6 +2,19 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 60vw;
+    justify-content: center;
+    width: 70vw;
+}
+
+.card {
+    width: 20rem;
+    margin-right: 2rem;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    width: 18rem;
+    height: 18rem;
+    object-fit: cover;
 }
