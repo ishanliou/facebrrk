@@ -1,12 +1,13 @@
 .bark-details {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 70vw;
 }
 
 .bark-details-card {
     width: 75rem;
+    margin-left: 2rem;
 }
 
 .bark-info {
@@ -16,4 +17,16 @@
     color: #4b4f56;
     font-weight: 300;
     line-height: 34px;
+  }
+
+  .bark-details-img {
+    
+  }
+
+  .bark-details-card-body{
+    
+  }
+
+  .description {
+    width: 40%;
   }

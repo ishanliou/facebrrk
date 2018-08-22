@@ -37,18 +37,16 @@ class BarkDetsils extends Component {
     return(
       <div className="bark-details">
         <div className="card bark-details-card">
-        <img className="card-img-top" src={this.state.media} alt={thisPet.name}/>
-        <div className="card-body">
+        <img className="card-img-top bark-details-img" src={this.state.media} alt={thisPet.name}/>
+        <div className="card-body bark-details-card-body">
           <h5 className="card-title">Name: {thisPet.name}</h5>
           <h6 className="card-text">Breed: {this.state.petBreed[0]} | {this.state.petBreed[1]}</h6>
           <h6 className="card-text">Age: {thisPet.age}</h6>
           <h6 className="card-text">Id: {thisPet.id}</h6>
           <h6 className="card-text">Gender: {thisPet.sex}</h6>
           <h6 className="card-text">Size: {thisPet.size}</h6>
-          <h6 className="card-text">Description: {thisPet.description}</h6>
+          <h6 className="card-text description">Description: {thisPet.description}</h6>
           <button type="button" className="btn btn-lg btn-dark" onClick={this.goBack.bind(this)}>Go Back </button>
-          <h6 className="card-text"></h6>
-          <h6 className="card-text"></h6>
         </div>
       </div>      
       </div>
