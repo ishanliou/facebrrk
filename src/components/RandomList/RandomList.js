@@ -36,11 +36,11 @@ class RandomList extends Component{
               <h6 class="card-text">Size: {randomPets.size}</h6>
               <h6 class="card-text">Breed: {Object.values(breed).map( e => e )}</h6>
               <h6 class="card-text">Contact: 
-              <ul>City: {contact.city}</ul>
-                <ul>State:{contact.state}</ul>
-                <ul>ZipCode: {contact.zip}</ul>
-                <ul>Email: {contact.email}</ul>
-                <ul>Phone: {contact.phone}</ul>
+                <h6>City: {contact.city}</h6>
+                <h6>State:{contact.state}</h6>
+                <h6>ZipCode: {contact.zip}</h6>
+                <h6>Email: {contact.email}</h6>
+                <h6>Phone: {contact.phone}</h6>
               </h6>
               <h6 class="card-text">Shelter Pet ID: {randomPets.shelterPetId ? randomPets.shelterPetId: "n/a"}</h6>
               <h6 class="card-text">Shelter ID: {randomPets.shelterId}</h6>

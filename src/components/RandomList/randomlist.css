@@ -1,5 +1,8 @@
 .random-list-card {
+    display: flex;
+    justify-content: center;
     width: 75rem;
+    margin-left: 2rem;
 }
 
 .random-list-card-img {
