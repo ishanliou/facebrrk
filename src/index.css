@@ -9,9 +9,6 @@ body {
   flex-direction: row;
 }
 
-@media (max-width: 600px) {
-  .App { flex-direction: column;}
-}
 
 .side {
   background-color: #f0faf8;
@@ -24,6 +21,7 @@ body {
 }
 @media (max-width: 600px) {
   .side { width: auto;}
+  .App { flex-direction: column;}
 }
 
 .main-container {
@@ -31,8 +29,6 @@ body {
   flex-direction: column;
   order: 2;
 }
-
-
 
 .search-bar {
   width: 70%;

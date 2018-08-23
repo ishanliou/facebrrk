@@ -8,6 +8,11 @@
 .bark-details-card {
     width: 75rem;
     margin-left: 2rem;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+  .bark-details-card { width: 18rem;}
 }
 
 .bark-info {
@@ -19,14 +24,6 @@
     line-height: 34px;
   }
 
-  .bark-details-img {
-    
-  }
-
-  .bark-details-card-body{
-    
-  }
-
   .description {
-    width: 40%;
+    width: 18rem;
   }

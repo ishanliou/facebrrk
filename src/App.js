@@ -14,7 +14,7 @@ import petfinder from './petfinder-client'
 import credentials from './credentials'
 import { Route, Switch } from 'react-router-dom' 
 import BarkDetsils from './components/BarkDetails/BarkDetails';
-import RandomList from './components/RandomList';
+import RandomList from './components/RandomList/RandomList';
 
 const petFinderKey = petfinder(credentials)
 const pf = petfinder()
