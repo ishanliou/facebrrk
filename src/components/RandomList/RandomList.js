@@ -36,14 +36,13 @@ class RandomList extends Component{
               <h6 className="card-text"><span className="sub-title">Size:</span> {randomPets.size}</h6>
               <h6 className="card-text"><span className="sub-title">Breed:</span> {Object.values(breed).map( e => e )}</h6>
               <h6 className="card-text"><span className="sub-title">Contact:</span></h6>
-                <div>
+              <div>
                 <h6 className="card-text"><span className="sub-title">City:</span>{contact.city}</h6>
                 <h6 className="card-text"><span className="sub-title">State:</span>{contact.state}</h6>
                 <h6 className="card-text"><span className="sub-title">ZipCode:</span> {contact.zip}</h6>
                 <h6 className="card-text"><span className="sub-title">Email:</span> {contact.email}</h6>
                 <h6 className="card-text"><span className="sub-title">Phone:</span>{contact.phone}</h6>
-                </div>
-              
+              </div>
               <h6 className="card-text"><span className="sub-title">Shelter Pet ID:</span> {randomPets.shelterPetId ? randomPets.shelterPetId: "n/a"}</h6>
               <h6 className="card-text"><span className="sub-title">Shelter ID:</span> {randomPets.shelterId}</h6>
             </div>
