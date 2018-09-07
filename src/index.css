@@ -7,8 +7,16 @@ body {
 .App {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
+.tag-line {
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
 
 .side {
   background-color: #f0faf8;

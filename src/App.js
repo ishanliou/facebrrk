@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
 import './App.css'
 import Home from './components/Home/Home'
 import BarkList from './components/BarkList/BarkList'
@@ -36,6 +35,7 @@ class App extends Component {
   componentDidMount () {
     this.search()
     this.random()
+    console.log('componentdid mount')
   }
 
   search () {
@@ -44,7 +44,7 @@ class App extends Component {
     promise.then((data) => {
       const pets = data.petfinder.pets ?  data.petfinder.pets.pet : []
       this.setState({pets})
-      // console.log(data)
+      console.log(data)
     })
   }
 

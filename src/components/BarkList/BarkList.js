@@ -5,7 +5,8 @@ import './barklist.css'
 
 class BarkList extends Component {  
   render(){
-    const bark = this.props.bark
+    const bark = this.props.bark ? this.props.bark: ''
+    console.log('bark', bark)
     return(
       <div className="bark-lists">
         {bark.map((pet => (
