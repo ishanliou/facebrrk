@@ -8,19 +8,31 @@
     align-items: baseline;
     max-width: 120em;
     margin: 0 auto;
+    flex-wrap: wrap;
 
 }
 
 .nav-bar ul {
-    display: flex;
-    flex-wrap: wrap;
     list-style: none;
 }
+
+@media screen and ( min-width: 480px) {
+    .nav-bar ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+    .tag-line {
+        display: flex;
+    }
+}
+
 
 .nav-bar li {
     font-family: 'Karla', sans-serif;
     padding: 1em 2em;
     font-size: 1.8em;
+    /* flex: 1 1 100%; */
 }
 
 .nav-bar li a {
@@ -28,12 +40,12 @@
     color:#ffffff;
 }
 
-.tag-line {
-    display: flex;
-    padding: 1em 2em;
+.tag-line {  
     color:  #fc565c;
     font-size: 1.8em;
     background: #ffffff;
     font-weight: 200;
     font-family: 'Montserrat', sans-serif;
+    padding: 1em 2em;
+    text-align: center;
 }
