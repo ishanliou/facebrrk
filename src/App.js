@@ -7,7 +7,7 @@ import SearchLocation from './components/SearchLocation'
 import Gender from './components/Gender'
 import ErrorBoundary from './components/ErrorBoundary'
 import RandomBark from './components/RandomBark'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 import About from './components/About'
 import petfinder from './petfinder-client'
 import credentials from './credentials'
@@ -81,9 +81,9 @@ class App extends Component {
     console.log(this.state)
     return (
       <div className="App">
-        <div className="side column">
+        <div className="app-nav-bar">
           <Navbar />
-            <div className="tag-line">Love is where the brrk is</div>
+          
             <Route  path="/findbrrk" render={()=> {
               return (
                 <div>

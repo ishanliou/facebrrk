@@ -1,0 +1,30 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    background: #fc565c;
+    align-items: baseline;
+}
+
+.nav-bar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.nav-bar li {
+    padding: 1em 2em;
+    font-size: 1.6em;
+}
+
+.nav-bar li a {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+.tag-line {
+    display: flex;
+    padding: 1em 2em;
+    color: #ffffff;
+    font-size: 1.6em;
+}
