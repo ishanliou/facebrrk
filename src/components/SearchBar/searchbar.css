@@ -1,0 +1,19 @@
+.search-bar-container .title {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: 'Karla', sans-serif;
+    margin: 1em;
+    font-weight: 600;
+    color: #22355b;
+}
+
+.search-bar-container .search-field {
+    display: flex;
+    justify-content: center;
+
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+

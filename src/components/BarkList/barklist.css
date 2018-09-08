@@ -1,0 +1,13 @@
+.card-img-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+    .card-img-top {
+        width: 20%;
+        justify-content: space-around;
+    }
+}

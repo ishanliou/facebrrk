@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import Home from './components/Home/Home'
 import BarkList from './components/BarkList/BarkList'
-import SearchBar from './components/SearchBar'
+import SearchBar from './components/SearchBar/SearchBar'
 import SearchLocation from './components/SearchLocation'
 import Gender from './components/Gender'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -87,7 +87,6 @@ class App extends Component {
             <Route  path="/findbrrk" render={()=> {
               return (
                 <div>
-                  <h1 className="title">Find Your Brrk</h1>
                   <SearchBar  animal={this.state.animal}
                               breed={this.state.breed}
                               changeBreed={this.changeBreed.bind(this)} />
