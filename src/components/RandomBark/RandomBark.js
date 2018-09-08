@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-// import Select from 'react-select'
+import './randombark.css'
 
 class RandomBark extends Component {
 
@@ -11,10 +11,10 @@ class RandomBark extends Component {
 
     render() {
       return(
-        <div className="search-field">
-          <label className="label">Match: </label>
+        <div className="search-random-container">
+          <label className="random-label">Match: </label>
             <Link to={`/findbrrk/random`}>
-              <select id="zodiac-list" onChange={this.updateRandom.bind(this)} className="search-bar match-select">
+              <select id="zodiac-list" onChange={this.updateRandom.bind(this)} className="random-select">
                   <option value=""  >Match your zodiac sign...</option>
                   <option value="Aquarius" className="option-color">Aquarius</option>
                   <option value="Pisces">Pisces</option>
@@ -31,7 +31,6 @@ class RandomBark extends Component {
                   
               </select>
             </Link>
-          <div style={{padding: "20px"}}></div>
         </div>
       )
     }

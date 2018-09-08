@@ -1,0 +1,16 @@
+.search-random-container {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 200;
+    margin-bottom: 0.5em;
+}
+
+.search-random-container .random-label {
+    width: 5em;
+}
+
+.search-random-container .random-select {
+    width: 20em;
+    height: 3em;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './gender.css'
 
 class Gender extends Component {
 
@@ -8,9 +9,9 @@ class Gender extends Component {
     
     render() {
         return(
-            <div className="search-field">
-                <label className="label">Gender: </label>
-                <input className="search-bar" 
+            <div className="search-gender-container">
+                <label className="gender-label">Gender: </label>
+                <input className="gender-input" 
                        type="text" 
                        list="gender-list"
                        placeholder="any..." 

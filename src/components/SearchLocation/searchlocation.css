@@ -1,0 +1,15 @@
+.search-location-container {
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 200;
+    margin-bottom: 0.5em;
+}
+
+.search-location-container .location-label {
+    width: 5em;
+}
+
+.search-location-container .location-input {
+    width: 20em;
+}

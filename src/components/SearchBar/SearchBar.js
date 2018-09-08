@@ -32,9 +32,9 @@ class SearchBar extends Component {
 				<div className="title">Find Your Brrk</div>
 				<div className="search-field">
           
-          <label className="label">Breed: </label>
+          <label className="breed-label">Breed: </label>
           
-          <input className="search-bar" 
+          <input className="search-input" 
                   type="text" 
                   list="breed-list"
                   placeholder="search a breed..." 

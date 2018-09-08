@@ -11,9 +11,16 @@
 .search-bar-container .search-field {
     display: flex;
     justify-content: center;
-
     font-size: 1.8rem;
     font-weight: 200;
+    margin-bottom: 0.5em;
 }
 
+.search-bar-container .search-field .breed-label {
+    width: 5em;
+}
+
+.search-bar-container .search-field .search-input {
+    width: 20em;
+}
 

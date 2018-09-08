@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './searchlocation.css'
 
 class SearchLocation extends Component {
   updateLocation (e) {
@@ -8,9 +9,9 @@ class SearchLocation extends Component {
 
   render(){
     return(
-      <div className="search-field">
-        <label className="label">Location: </label>
-        <input className="search-bar" 
+      <div className="search-location-container">
+        <label className="location-label">Location: </label>
+        <input className="location-input" 
                 type="text" 
                 placeholder="enter a zipcode near you..." 
                 onChange={this.updateLocation.bind(this)}
