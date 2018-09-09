@@ -16,11 +16,11 @@ class BarkList extends Component {
             </Link>
         
             <div className="card-body">
-              <h5 className="card-title">{pet.name}</h5>
-              <h6 className="card-text"><span className="sub-title">Age:</span> {pet.age}</h6>
-              <h6 className="card-text"><span className="sub-title">Sex:</span> {pet.sex}</h6>
-              <h6 className="card-text"><span className="sub-title">Breed:</span> {pet.breeds.breed}</h6>
-              <h6 className="card-text"><span className="sub-title">Location:</span> {pet.contact.city}, {pet.contact.state} {pet.contact.zip}</h6>
+              <div className="card-title">{pet.name}</div>
+              <div className="card-text"><span className="sub-title">Age:</span> {pet.age}</div>
+              <div className="card-text"><span className="sub-title">Sex:</span> {pet.sex}</div>
+              <div className="card-text"><span className="sub-title">Breed:</span> {pet.breeds.breed}</div>
+              <div className="card-text"><span className="sub-title">Location:</span> {pet.contact.city}, {pet.contact.state} {pet.contact.zip}</div>
               {/* <p className="card-text">Description: {pet.description}</p> */}
             </div>
           </div>
