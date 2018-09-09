@@ -44,7 +44,6 @@ class App extends Component {
     promise.then((data) => {
       const pets = data.petfinder.pets ?  data.petfinder.pets.pet : []
       this.setState({pets})
-      console.log(data)
     })
   }
 
@@ -52,12 +51,9 @@ class App extends Component {
     const { animal, breed, location, sex } = this.state
     const promise = pf.pet.getRandom({animal, breed, location, sex, output: 'full'})
     promise.then((data) => {
-      // const  randomPets = data.petfinder.randomPets ?  data.petfinder.pets.pet : []
       this.setState({
         randomPets: data.petfinder.pet
         })
-      console.log('randomPets',data)
-      console.log('randomPets@@',data.petfinder.pet)
     })
   }
 
@@ -78,35 +74,30 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
-        <div className="app-nav-bar">
-          <Navbar />
+        <Navbar />
           
-          <Route  path="/findbrrk" render={()=> {
-            return (
-              <div>
-                <SearchBar  animal={this.state.animal}
-                            breed={this.state.breed}
-                            changeBreed={this.changeBreed.bind(this)} />
-                <SearchLocation changeLocation={this.changeLocation.bind(this)}
-                                location={this.state.location} />                 
-                <Gender changeGender={this.changeGender.bind(this)}/>
-                {/* <RandomBark getRandomPet={this.getRandomPet.bind(this)} /> */}
-              </div>
-            )}} 
-          /> 
+        <Route  path="/findbrrk" render={()=> {
+          return (
+            <div>
+              <SearchBar  animal={this.state.animal}
+                          breed={this.state.breed}
+                          changeBreed={this.changeBreed.bind(this)} />
+              <SearchLocation changeLocation={this.changeLocation.bind(this)}
+                              location={this.state.location} />                 
+              <Gender changeGender={this.changeGender.bind(this)}/>
+            </div>
+          )}} 
+        /> 
 
-          <Route path="/match" render= {() => {
-               return(
-                <RandomBark getRandomPet={this.getRandomPet.bind(this)} />
-               )
-             }}
-             />
-        </div>
+        <Route path="/match" render= {() => {
+              return(
+              <RandomBark getRandomPet={this.getRandomPet.bind(this)} />
+              )
+            }}
+            />
         
-
         <div className="main-container">
           <Switch>
             <Route exact path="/" component={ Home } /> 
@@ -121,27 +112,24 @@ class App extends Component {
                                   location={this.state.location}
                                   randomPets={this.state.randomPets} />
                 </ErrorBoundary>
-              )                              
-            }} />
+              )}} 
+            />
+
             <Route path="/match" render={() => {
               return <RandomList randomPets={this.state.randomPets}/>
-            }}/>
+              }}
+            />
 
             <Route path="/findbrrk/:petId" render={(route) => {
-              // console.log(route.match.params.petId)
               const petId = route.match.params.petId
               return(
                 <BarkDetsils petId={ petId }/>
-              )
-            }}/>
+              )}}
+            />
           </Switch>
         </div>
-
-        
     </div>
-    );
-
-    
+    )
   }
 }
 
