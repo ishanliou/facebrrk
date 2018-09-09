@@ -19,20 +19,30 @@
 }
 
 @media screen and (min-width: 480px) {
+    /* .random-list-container {
+
+    }*/
+    .random-list-card-container {
+        display: flex;
+        flex-wrap: wrap;
+    } 
     .random-list {
         width: 70vw;
         margin: 0 auto;
+        margin-top: 8em;
     }
 
     .random-list-card-img {
+        display: flex;
         width: 34em;
         height: 34em;
         object-fit: cover;
         margin-bottom: 3em;
+        margin-right: 3em;
     }
     .random-list{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
 
     .random-list-card-body {

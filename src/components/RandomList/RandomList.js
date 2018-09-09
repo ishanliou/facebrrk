@@ -24,9 +24,9 @@ class RandomList extends Component{
        
        
         return(
-          <div>
+          <div className="random-list-container">
           <div className="random-list">
-            <div>
+            <div className="random-list-card-container">
              {photos.map((petPhotos, index )=> (
                 <img className="random-list-card-img" src={petPhotos} key={index} alt={randomPets.name}/>
               ))}
