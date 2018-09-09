@@ -14,6 +14,7 @@
     font-size: 1.8rem;
     font-weight: 200;
     margin-bottom: 0.5em;
+    color: #22355b;
 }
 
 .search-bar-container .search-field .breed-label {
@@ -22,5 +23,6 @@
 
 .search-bar-container .search-field .search-input {
     width: 20em;
+    padding-left: 1em;
 }
 

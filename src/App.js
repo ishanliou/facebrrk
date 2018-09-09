@@ -24,7 +24,7 @@ class App extends Component {
     super(props);
     this.state ={
       animal: 'dog',
-      breed: '',
+      breed: 'French Bulldog',
       sex: '',
       location: 'Los Angeles, CA',
       pets: [],
@@ -99,7 +99,7 @@ class App extends Component {
              /> 
             </div>
 
-        <div className="main-container column">
+        <div className="main-container">
           <Switch>
             <Route exact path="/" component={ Home } /> 
             <Route path="/home" component={ Home } />

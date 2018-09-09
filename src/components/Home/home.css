@@ -1,15 +1,17 @@
 .home {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .home img {
-    width: 100%;
-    margin-top: 8em;
+  width: 100%;
+
 }
 
 @media screen and ( min-width: 480px) {
-    .home img {
-       width: 70vw;
-    }
+  .home img {
+    width: 100vw;
+    height: 80vh;
+    object-fit: cover;
+  }
 }

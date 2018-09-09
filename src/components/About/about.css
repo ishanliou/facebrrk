@@ -5,16 +5,14 @@
 
 .about-container img {
     width: 100vw;
-    height: 50vh;
+    height: 45vh;
     object-fit: cover;
-
 }
 
-@media screen and ( -width: 480px) {
+@media screen and ( min-width: 480px) {
     .about-container img {
         width: 100vw;
-        height: 80vh;
+        height: 70vh;
         object-fit: cover;
-    
     }
 }
