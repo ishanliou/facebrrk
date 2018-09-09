@@ -30,11 +30,9 @@ class RandomBark extends Component {
                     <option value="Scorpio">Scorpio</option>
                     <option value="Sagittarius">Sagittarius</option>
                     <option value="Capricorn">Capricorn</option>
-                    
                 </select>
               </Link>
           </div>
-          
         </div>
       )
     }

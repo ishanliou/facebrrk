@@ -30,8 +30,6 @@ select {
     outline: solid 1px #fc565c;
     background-color: #ffffff;
     margin-left: 1em;
-    /* color: #22355b; */
-
 }
 
 @media screen and (min-width: 480px) {

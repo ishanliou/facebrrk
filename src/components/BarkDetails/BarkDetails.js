@@ -38,48 +38,49 @@ class BarkDetsils extends Component {
       <div className="bark-details">
         <div className="bark-details-card">
           <div>
-          <img className="bark-details-card-img-top" src={this.state.media} alt={thisPet.name}/>
+            <img className="bark-details-card-img-top" src={this.state.media} alt={thisPet.name}/>
           </div>
-        <div className="bark-details-card-body">
-          <div className="card-title">
-            <span className="sub-title"></span> 
+          
+          <div className="bark-details-card-body">
+            <div className="card-title">
+              <span className="sub-title"></span> 
               {thisPet.name}
-          </div>
+            </div>
 
-          <div className="card-text">
-            <span className="sub-title">Breed:</span> 
-            {this.state.petBreed[0]} | {this.state.petBreed[1]}
-          </div>
+            <div className="card-text">
+              <span className="sub-title">Breed:</span> 
+              {this.state.petBreed[0]} | {this.state.petBreed[1]}
+            </div>
 
-          <div className="card-text">
-            <span className="sub-title">Age:</span> 
+            <div className="card-text">
+              <span className="sub-title">Age:</span> 
               {thisPet.age}
-          </div>
+            </div>
 
-          <div className="card-text">
-            <span className="sub-title">Id:</span> 
+            <div className="card-text">
+              <span className="sub-title">Id:</span> 
               {thisPet.id}
-          </div>
+            </div>
 
-          <div className="card-text">
-            <span className="sub-title">Gender:</span> 
+            <div className="card-text">
+              <span className="sub-title">Gender:</span> 
               {thisPet.sex}
-          </div>
+            </div>
 
-          <div className="card-text">
-            <span className="sub-title">Size:</span> 
+            <div className="card-text">
+              <span className="sub-title">Size:</span> 
               {thisPet.size}
-          </div>
+            </div>
 
-          <div className="card-text text-description">
-            <span className="sub-title">Description:</span> 
-            {thisPet.description}
-          </div>
-         
+            <div className="card-text text-description">
+              <span className="sub-title">Description:</span> 
+              {thisPet.description}
+            </div>
+          
             <button type="button" className="btn-go-back" onClick={this.goBack.bind(this)}>Go Back </button>
-        
-        </div>
-      </div>      
+          
+          </div>
+        </div>      
       </div>
     )
   }

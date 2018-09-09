@@ -49,7 +49,6 @@
     padding-right: 0.2em;
 }
 
-
 @media screen and (min-width: 480px) {
     .bark-lists {
         display: flex;
