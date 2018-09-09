@@ -11,6 +11,7 @@
 .search-bar-container .search-field {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 1.8rem;
     font-weight: 200;
     margin-bottom: 0.5em;
@@ -23,6 +24,7 @@
 
 .search-bar-container .search-field .search-input {
     width: 20em;
+    height: 4em;
     padding-left: 1em;
     border: solid 1px  #fc565c;
 }

@@ -45,9 +45,7 @@ class SearchBar extends Component {
                       <option key={breed} value={breed}/>
                   )}                  
           </datalist>
-        
-          
-			  </div>
+        </div>
 			</div>
 		)	
 	}

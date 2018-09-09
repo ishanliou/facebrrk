@@ -1,18 +1,43 @@
 .search-random-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     font-size: 1.8rem;
     font-weight: 200;
     margin-bottom: 0.5em;
     color: #22355b;
 }
 
-.search-random-container .random-label {
-    width: 5em;
+.random-select {
+    display: flex;
+    align-items: center;
 }
 
-.search-random-container .random-select {
+.search-random-container .match-title {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-family: 'Karla', sans-serif;
+    margin: 1em;
+    font-weight: 600;
+    color: #22355b;
+}
+
+select {
     width: 20em;
-    height: 3em;
-    padding-left: 1em;
+    height: 4em;
+    border: none;
+    outline: solid 1px #fc565c;
+    background-color: #ffffff;
+    margin-left: 1em;
+    /* color: #22355b; */
+
+}
+
+@media screen and (min-width: 480px) {
+    .search-random-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
