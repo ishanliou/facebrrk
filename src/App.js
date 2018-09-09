@@ -24,7 +24,7 @@ class App extends Component {
     super(props);
     this.state ={
       animal: 'dog',
-      breed: 'French Bulldog',
+      breed: '',
       sex: '',
       location: 'Los Angeles, CA',
       pets: [],
@@ -84,20 +84,28 @@ class App extends Component {
         <div className="app-nav-bar">
           <Navbar />
           
-            <Route  path="/findbrrk" render={()=> {
-              return (
-                <div>
-                  <SearchBar  animal={this.state.animal}
-                              breed={this.state.breed}
-                              changeBreed={this.changeBreed.bind(this)} />
-                  <SearchLocation changeLocation={this.changeLocation.bind(this)}
-                                  location={this.state.location} />                 
-                  <Gender changeGender={this.changeGender.bind(this)}/>
-                  <RandomBark getRandomPet={this.getRandomPet.bind(this)} />
-                </div>
-              )}} 
-             /> 
-            </div>
+          <Route  path="/findbrrk" render={()=> {
+            return (
+              <div>
+                <SearchBar  animal={this.state.animal}
+                            breed={this.state.breed}
+                            changeBreed={this.changeBreed.bind(this)} />
+                <SearchLocation changeLocation={this.changeLocation.bind(this)}
+                                location={this.state.location} />                 
+                <Gender changeGender={this.changeGender.bind(this)}/>
+                {/* <RandomBark getRandomPet={this.getRandomPet.bind(this)} /> */}
+              </div>
+            )}} 
+          /> 
+
+          <Route path="/match" render= {() => {
+               return(
+                <RandomBark getRandomPet={this.getRandomPet.bind(this)} />
+               )
+             }}
+             />
+        </div>
+        
 
         <div className="main-container">
           <Switch>
@@ -115,7 +123,7 @@ class App extends Component {
                 </ErrorBoundary>
               )                              
             }} />
-            <Route path="/findbrrk/random" render={() => {
+            <Route path="/match" render={() => {
               return <RandomList randomPets={this.state.randomPets}/>
             }}/>
 

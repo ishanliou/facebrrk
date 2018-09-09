@@ -13,7 +13,7 @@ class RandomBark extends Component {
       return(
         <div className="search-random-container">
           <label className="random-label">Match: </label>
-            <Link to={`/findbrrk/random`}>
+            <Link to={`/match`}>
               <select id="zodiac-list" onChange={this.updateRandom.bind(this)} className="random-select">
                   <option value=""  >Match your zodiac sign...</option>
                   <option value="Aquarius" className="option-color">Aquarius</option>
