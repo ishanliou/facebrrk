@@ -14,4 +14,5 @@
 .search-location-container .location-input {
     width: 20em;
     padding-left: 1em;
+    border: solid 1px  #fc565c;
 }

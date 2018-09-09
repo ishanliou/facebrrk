@@ -5,8 +5,6 @@
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
-    background-color: #fd676517;
-    
 }
 
 .bark-lists {
@@ -41,10 +39,10 @@
     font-size: 1.2rem;
     color: #22355b;
     font-weight: 100;
+    margin-bottom: .3em;
 }
 
 .sub-title {
-    /* font-family: 'Karla', sans-serif; */
     font-size: 1.2rem;
     color: #22355b;
     font-weight: 300;
@@ -64,11 +62,11 @@
 
     .bark-lists .card {
         display: flex;
-        flex: 0 1 calc(25% - 2.5em);
+        flex: 0 1 calc(25% - 3em);
         flex-direction: column;
-        background-color: #fd676517;
         align-items: center;
         margin-bottom: 3em;
+        border: solid 0.1em #22355b25;
     }
 
     .card-body {

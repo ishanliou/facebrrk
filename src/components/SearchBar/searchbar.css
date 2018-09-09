@@ -24,5 +24,7 @@
 .search-bar-container .search-field .search-input {
     width: 20em;
     padding-left: 1em;
+    border: solid 1px  #fc565c;
 }
+
 
