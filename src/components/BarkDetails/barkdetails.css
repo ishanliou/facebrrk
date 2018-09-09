@@ -2,11 +2,11 @@
     margin-top: 8em;
 }
 
-.bark-details-card-body{
+/* .bark-details-card-body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-}
+} */
 
 .bark-details-card-img-top {
     width: 100%;

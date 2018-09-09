@@ -25,26 +25,28 @@ class RandomList extends Component{
        
         return(
           <div>
-          <div className="card random-list-card">
-            <div>{photos.map((petPhotos, index )=> (
-                 <img className="random-list-card-img" src={petPhotos} key={index} alt={randomPets.name}/>
-            ))}</div>
-            <div className="card-body">
-              <h5 className="card-title">Name: {randomPets.name}</h5>
-              <h6 className="card-text"><span className="sub-title">Age:</span> {randomPets.age}</h6>
-              <h6 className="card-text"><span className="sub-title">Sex:</span> {randomPets.sex}</h6>
-              <h6 className="card-text"><span className="sub-title">Size:</span> {randomPets.size}</h6>
-              <h6 className="card-text"><span className="sub-title">Breed:</span> {Object.values(breed).map( e => e )}</h6>
-              <h6 className="card-text"><span className="sub-title">Contact:</span></h6>
+          <div className="random-list">
+            <div>
+             {photos.map((petPhotos, index )=> (
+                <img className="random-list-card-img" src={petPhotos} key={index} alt={randomPets.name}/>
+              ))}
+            </div>
+            <div className="random-list-card-body">
+              <div className="card-title">Name: {randomPets.name}</div>
+              <div className="card-text"><span className="sub-title">Age:</span> {randomPets.age}</div>
+              <div className="card-text"><span className="sub-title">Sex:</span> {randomPets.sex}</div>
+              <div className="card-text"><span className="sub-title">Size:</span> {randomPets.size}</div>
+              <div className="card-text"><span className="sub-title">Breed:</span> {Object.values(breed).map( e => e )}</div>
+              <div className="card-text"><span className="sub-title">Contact:</span></div>
               <div>
-                <h6 className="card-text"><span className="sub-title">City:</span>{contact.city}</h6>
-                <h6 className="card-text"><span className="sub-title">State:</span>{contact.state}</h6>
-                <h6 className="card-text"><span className="sub-title">ZipCode:</span> {contact.zip}</h6>
-                <h6 className="card-text"><span className="sub-title">Email:</span> {contact.email}</h6>
-                <h6 className="card-text"><span className="sub-title">Phone:</span>{contact.phone}</h6>
+                <div className="card-text"><span className="sub-title">City:</span>{contact.city}</div>
+                <div className="card-text"><span className="sub-title">State:</span>{contact.state}</div>
+                <div className="card-text"><span className="sub-title">ZipCode:</span> {contact.zip}</div>
+                <div className="card-text"><span className="sub-title">Email:</span> {contact.email}</div>
+                <div className="card-text"><span className="sub-title">Phone:</span>{contact.phone}</div>
               </div>
-              <h6 className="card-text"><span className="sub-title">Shelter Pet ID:</span> {randomPets.shelterPetId ? randomPets.shelterPetId: "n/a"}</h6>
-              <h6 className="card-text"><span className="sub-title">Shelter ID:</span> {randomPets.shelterId}</h6>
+              <div className="card-text"><span className="sub-title">Shelter Pet ID:</span> {randomPets.shelterPetId ? randomPets.shelterPetId: "n/a"}</div>
+              <div className="card-text"><span className="sub-title">Shelter ID:</span> {randomPets.shelterId}</div>
             </div>
           </div>
           </div>

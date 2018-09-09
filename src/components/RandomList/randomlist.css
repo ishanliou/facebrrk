@@ -1,0 +1,42 @@
+.random-list {
+    margin-top: 8em;
+}
+
+.random-list-card-img {
+    width: 100%;
+    height: 34em;
+    object-fit: cover;
+    margin-bottom: 1em;
+}
+
+.random-list-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 88vw;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+@media screen and (min-width: 480px) {
+    .random-list {
+        width: 70vw;
+        margin: 0 auto;
+    }
+
+    .random-list-card-img {
+        width: 34em;
+        height: 34em;
+        object-fit: cover;
+        margin-bottom: 3em;
+    }
+    .random-list{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .random-list-card-body {
+        margin: 0;
+        width: auto;
+    }
+}
