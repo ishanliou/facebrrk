@@ -1,18 +1,17 @@
 .about-container {
-    display: flex;
-    justify-content: center;
+    margin-top: 8em;
 }
 
-.about-container img {
-    width: 100vw;
-    height: 45vh;
-    object-fit: cover;
+.about-img img {
+    margin-bottom: 2em
 }
 
-@media screen and ( min-width: 480px) {
-    .about-container img {
-        width: 100vw;
-        height: 70vh;
-        object-fit: cover;
+@media screen and (min-width: 480px) {
+    .about-container {
+        display: flex;
+    }
+    .about-img img {
+        margin-left: 2em;
+        flex: 33%;
     }
 }
