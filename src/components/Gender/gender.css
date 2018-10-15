@@ -13,10 +13,10 @@
 }
 
 .search-gender-container .gender-input {
-    width: 20em;
-    height: 4em;
-    padding-left: 1em;
-    border: solid 1px  #fc565c;
+    width: 21em;
+    height: 4.2em; 
+    margin-left: 0em !important;
+    color: #22355b;
 }
 
 ::placeholder {

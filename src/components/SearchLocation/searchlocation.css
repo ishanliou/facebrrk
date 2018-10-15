@@ -17,4 +17,9 @@
     height: 4em;
     padding-left: 1em;
     border: solid 1px  #fc565c;
+    color: #22355b;
+}
+
+::placeholder {
+    color: #22355b;
 }

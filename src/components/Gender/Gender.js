@@ -11,16 +11,26 @@ class Gender extends Component {
 		return(
 			<div className="search-gender-container">
 				<label className="gender-label">Gender: </label>
-				<input className="gender-input" 
+				{/* <input className="gender-input" 
 								type="text" 
 								list="gender-list"
 								placeholder="any..." 
 								onChange={this.updateGender.bind(this)}
-				/>
-				<datalist id="gender-list">
+				/> */}
+				{/* <datalist id="gender-list">
 						<option value="F">Female</option>
 						<option value="M">Male</option>
-				</datalist>
+				</datalist> */}
+				<select className="gender-input" 
+								type="text" 
+								list="gender-list"
+								placeholder="any..." 
+								onChange={this.updateGender.bind(this)}>
+					<option value=""> Any...</option>
+					<option value="F"> F</option>
+					<option value="M"> M</option>
+			    
+				</select>
 			</div>
 		)
 	}

@@ -35,6 +35,9 @@ select {
 .random-select a {
     text-decoration: none;
 }
+.search-random-container .random-select{
+    color: #22355b;
+}
 
 @media screen and (min-width: 480px) {
     .search-random-container {
