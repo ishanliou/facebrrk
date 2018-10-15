@@ -1,9 +1,13 @@
+.random-list-container {
+    display: flex;
+}
+
 .random-list {
     margin-top: 8em;
 }
 
 .random-list-card-img {
-    width: 100%;
+    width: 112%;
     height: 34em;
     object-fit: cover;
     margin-bottom: 1em;
