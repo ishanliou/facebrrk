@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './errorboundary.css'
 
 class ErrorBoundary extends Component {
     constructor(props) {
@@ -18,9 +19,13 @@ class ErrorBoundary extends Component {
     render() {
       if (this.state.hasError) {
         // fallback UI
-        return  <p>Ooooops... 
-                  <button type="button" onClick={ this.refreshPage.bind(this) }> Try Again </button>
-                </p>;
+        return (
+          <div className="error-container">
+            <p className="error-text">Ooooops...<br/>Something went wrong...
+              <button className="btn-try-again" type="button" onClick={ this.refreshPage.bind(this) }> Try Again </button>
+            </p>
+          </div> 
+        )       
       }
       return this.props.children;
     }
