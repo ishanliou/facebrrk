@@ -33,6 +33,16 @@
     text-decoration: none;
 }
 
+.tag-line h1:hover, h1:active, h1:focus {
+    color: #2798d2;
+    transition: 0.3s;
+}
+
+.tag-line img:hover {
+   opacity: 0.6;
+   transition: 0.3s;
+}
+
 .wide-nav-menu {
     flex-grow: 2;
     display: none;
@@ -73,6 +83,11 @@
     color:#052a4e;
 }
 
+.narrow-nav-menu li a:hover, a:active, a:focus {
+    color: #fc565c;
+    transition: 0.3s;
+}
+
 i {
     padding-right: 2em;
     margin-bottom: 1em;
@@ -90,6 +105,12 @@ i {
     .wide-nav-menu {
         display: inline;
     }
+    
+    .wide-nav-menu li a:hover, a:active, a:focus {
+        color: #fc565c;
+        transition: 0.3s;
+    }
+
     .nav-bar ul {
         display: flex;
         flex-wrap: wrap;

@@ -33,7 +33,7 @@ class Navbar extends Component {
         <div className="nav-bar">
           <div className="tag-line">
             <Link to="/home">
-              <img src={`./image/facebrrk-logo.svg`} style={{width:"50px", height:"50px", paddingRight:"1.5em", paddingTop:"1em"}} alt="logo"/>
+              <img className="animated bounce" src={`./image/facebrrk-logo.svg`} style={{width:"50px", height:"50px", paddingRight:"1.5em", paddingTop:"1em"}} alt="logo"/>
             </Link>
             <Link to="/home">
             <h1>FaceBrrk</h1>
