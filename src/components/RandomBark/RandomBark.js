@@ -16,7 +16,7 @@ class RandomBark extends Component {
           <div className="random-select">
             <label className="random-label">Match: </label>
               <Link to={`/match`}>
-                <select id="zodiac-list" onChange={this.updateRandom.bind(this)} className="random-select">
+                <select className="zodiac-list" onChange={this.updateRandom.bind(this)} className="random-select">
                     <option value=""  >Match your zodiac sign...</option>
                     <option value="Aquarius" className="option-color">Aquarius</option>
                     <option value="Pisces">Pisces</option>
