@@ -11,7 +11,7 @@ class BarkList extends Component {
       <div className="bark-lists">
         {bark.map((pet => (
           <div className="card" key={pet.id}>
-            <Link to={`/findbrrk/${pet.id}`}>
+            <Link to={`/${pet.id}`}>
               <img className="card-img-top" src={pet.media.photos? pet.media.photos.photo[2].value: ''} alt={pet.name}/>
             </Link>
         

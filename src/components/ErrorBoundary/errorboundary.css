@@ -23,6 +23,7 @@
     text-align: center;
     font-size: .8rem;
     margin-left: 2em;
+    border-radius: .6em;
 }
 
 .btn-try-again:hover {

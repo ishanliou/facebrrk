@@ -9,6 +9,7 @@ import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary'
 import RandomBark from './components/RandomBark/RandomBark'
 import Navbar from './components/Navbar/Navbar'
 import About from './components/About/About'
+import Footer from './components/Footer/Footer'
 import petfinder from './petfinder-client'
 import credentials from './credentials'
 import { Route, Switch } from 'react-router-dom' 
@@ -120,7 +121,7 @@ class App extends Component {
               }}
             />
 
-            <Route path="/findbrrk/:petId" render={(route) => {
+            <Route path="/:petId" render={(route) => {
               const petId = route.match.params.petId
               return(
                 <BarkDetsils petId={ petId }/>
@@ -128,6 +129,7 @@ class App extends Component {
             />
           </Switch>
         </div>
+        <Footer />
     </div>
     )
   }
