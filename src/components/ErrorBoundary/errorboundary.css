@@ -18,14 +18,15 @@
     box-sizing: border-box;
     text-decoration: none;
     font-weight: 300;
-    background-color: #fc565c;
+    background-color: #fd8283;
     color:#ffffff;
     text-align: center;
     font-size: .8rem;
     margin-left: 2em;
+    outline: none;
 }
 
 .btn-try-again:hover {
-    opacity: 0.6;
+    background-color: #f96670;
     transition: 0.3s;
 }

@@ -41,9 +41,9 @@ class Navbar extends Component {
           </div>
           <div className="wide-nav-menu">
             <ul>
-              <li><Link to="/match" > Find Your Match </Link></li>
+              <li><Link to="/match" > Match Your Zodiac Sign </Link></li>
               <li><Link to="/findbrrk" > Find YourBrrk </Link></li>
-              <li><Link to="/about" > About </Link></li>                    
+              {/* <li><Link to="/about" > About </Link></li>                     */}
             </ul>
           </div>
          </div>

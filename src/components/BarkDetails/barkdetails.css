@@ -22,14 +22,14 @@
     width: 10em;
     height: 4em;
     padding: 0.35em 1.2em;
-    border: 0.05em solid #fc565c;
+    border: 0.05em solid#fd8283;
     margin: 0 auto;
     margin-top: 3em;
     margin-bottom: 10em;
     box-sizing: border-box;
     text-decoration: none;
     font-weight: 300;
-    color:#fc565c;
+    color:#fd8283;
     text-align: center;
     transition: all 0.2s;
     font-size: .8rem;
@@ -38,7 +38,8 @@
 
 .btn-go-back:hover{
     color:#ffffff;
-    background-color:#fc565c; 
+    background-color:#fd8283; 
+    outline: none;
     }
 
 .btn-container {

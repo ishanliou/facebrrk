@@ -7,12 +7,51 @@
   width: 100%;
 }
 
+
+
 @media screen and ( min-width: 480px) {
   .home img {
     width: 100vw;
-    /* height: 80vh; */
-    /* object-fit: cover; */
     margin-top: 1em;
     margin-bottom: 10em;
+  }
+
+  .header-wrapper {
+    position: absolute;
+    max-width: 40vw;
+    margin-left: 35em;
+    margin-top: 10em;
+  }
+  
+  .header-wrapper h1 {
+    font-size: 4rem;
+    color:  #052a4e;
+    border-bottom: .15em solid #fd8283;
+    line-height: 1.2;
+  }
+
+  .heightlight-text {
+    position: absolute;
+  }
+
+  .heightlight-text p {
+    font-size: 2em;
+    color:  #052a4e;
+    letter-spacing: 1px;
+    max-width: 36vw;
+    margin-top: 22em;
+    margin-left: 36em;
+    font-weight: 300;
+    line-height: 1.6;
+    background-color: #ffffff;
+    padding: .5em 1em .75rem 1em;
+  }
+
+  .h1-span {
+    font-weight: 700;
+    font-size: 4rem;
+    color:  #052a4e;
+    border-bottom: .15em solid #fd8283;
+    line-height: 1.2;
   }
 }
