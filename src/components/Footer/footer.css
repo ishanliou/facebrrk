@@ -1,14 +1,21 @@
 .footer-container {
     display: flex;
     justify-content: center;
-    height: 20em;
+    height: 10em;
     margin-top: 5em;
     background-color: #052a4e;
     border-top: 4px solid #fd8283;
     padding: 7.5em 8em;
     color: #ffffff;
+    width: 100%
 }
 
 .footer-container i {
     color: #ffffff;
+}
+
+@media screen and (min-width: 480px) {
+    .footer-container {
+        height: 20em;
+    }
 }
