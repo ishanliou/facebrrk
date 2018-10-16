@@ -31,21 +31,18 @@ class SearchBar extends Component {
 			<div className="search-bar-container">
 				<div className="title">Find Your Brrk</div>
 				<div className="search-field">
-          
-				<label className="breed-label">Breed: </label>
-
-				<select className="search-input" 
-								type="text" 
-								list="breed-list"
-								placeholder="search a breed..." 
-								onChange={this.updateBreed.bind(this)}>
-					{this.state.breeds.map((breed) => 
-						<option key={breed} 
-								value={breed}>
-							{breed}
-						</option>
-					)}        
-				</select>
+          <label className="breed-label">Breed: </label>
+          <select className="search-input" 
+                  type="text" 
+                  list="breed-list"
+                  placeholder="search a breed..." 
+                  onChange={this.updateBreed.bind(this)}>
+                    {this.state.breeds.map((breed) => 
+                      <option key={breed} 
+                              value={breed}>{breed}
+                      </option>
+                    )}        
+          </select>
 				</div>
 			</div>
 		)	

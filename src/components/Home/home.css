@@ -10,9 +10,9 @@
 @media screen and ( min-width: 480px) {
   .home img {
     width: 100vw;
-    height: 80vh;
-    object-fit: cover;
-    margin-top: 8em;
+    /* height: 80vh; */
+    /* object-fit: cover; */
+    margin-top: 1em;
     margin-bottom: 10em;
   }
 }

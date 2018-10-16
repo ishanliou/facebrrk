@@ -77,7 +77,10 @@ class BarkDetsils extends Component {
               {thisPet.description}
             </div>
           
-            <button type="button" className="btn-go-back" onClick={this.goBack.bind(this)}>Go Back </button>
+            <div className="btn-container">
+              <button type="button" className="btn-go-back" onClick={this.goBack.bind(this)}>Go Back </button>
+
+            </div>
           
           </div>
         </div>      
