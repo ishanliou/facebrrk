@@ -12,8 +12,8 @@ const Home = () => {
         <span className="h1-span"> brrk is ...</span>
       </div>
       <div className="heightlight-text">  
-        <p>Facebrrk is the most popular source to find your bark soulmate. 
-           Find your bark around your area or find your furiend match your zodiac sign. </p>
+        <p>Facebrrk is using the most popular source from PetFinder.com to find your barking soulmate. 
+           Find your bark near you or match your furiend with zodiac sign. </p>
 
       </div>
     </div>
