@@ -5,7 +5,8 @@ const Home = () => {
   return(
     <div className="home">
       <div className="item">
-        <img src={`./image/fistbump.gif`}  alt="hero-img"/>
+        <img className="fist-bump-lg" src={`./image/fistbump.gif`}  alt="hero-img"/>
+        <img className="fist-bump-sm" src={`./image/facebrrk-sm.gif`}  alt="hero-img"/>
       </div>
       <div className="header-wrapper">
         <h1>Love is where the</h1>

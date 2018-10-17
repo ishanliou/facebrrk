@@ -46,7 +46,7 @@
     padding-left: 3em;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
     .bark-details {
         width: 70vw;
         margin: 0 auto;
