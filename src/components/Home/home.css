@@ -27,8 +27,8 @@
 .header-wrapper {
   order: 1;
   z-index: 1;
-  position: absolute;
-  top: 20em;
+  position: relative;
+  top: 15em;
 }
 
 .h1-span {

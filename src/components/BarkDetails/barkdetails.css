@@ -46,6 +46,9 @@
     padding-left: 3em;
 }
 
+.bark-details-card-body .card-title {
+    padding-left: 0.3em !important;
+}
 @media screen and (min-width: 768px) {
     .bark-details {
         width: 70vw;

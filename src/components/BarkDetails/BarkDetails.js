@@ -9,7 +9,10 @@ class BarkDetsils extends Component {
     id: this.props.petId,
     selectedPet: [],
     petBreed: [],
-    media: []
+    media: [],
+    email: [],
+    city: [],
+    state: []
   }
 
   componentDidMount () {
@@ -23,9 +26,15 @@ class BarkDetsils extends Component {
         const selectedPet = data.petfinder.pet ?  data.petfinder.pet : []
         const petBreed = data.petfinder.pet.breeds.breed ?  data.petfinder.pet.breeds.breed : []
         const media = data.petfinder.pet.media.photos.photo ?  data.petfinder.pet.media.photos.photo[2].value : []
+        const email = data.petfinder.pet.contact.email ? data.petfinder.pet.contact.email :[]
+        const city = data.petfinder.pet.contact.city ? data.petfinder.pet.contact.city : []
+        const state = data.petfinder.pet.contact.state ? data.petfinder.pet.contact.state : []
         this.setState({selectedPet})
         this.setState({petBreed})
         this.setState({media})
+        this.setState({email})
+        this.setState({city})
+        this.setState({state})
     })}
 
   goBack () {
@@ -70,6 +79,16 @@ class BarkDetsils extends Component {
             <div className="card-text">
               <span className="sub-title">Size:</span> 
               {thisPet.size}
+            </div>
+
+            <div className="card-text">
+              <span className="sub-title">Location:</span> 
+              {this.state.city} | {this.state.state}
+            </div>
+
+            <div className="card-text">
+              <span className="sub-title">Contact:</span> 
+              {this.state.email}
             </div>
 
             <div className="card-text text-description">

@@ -21,7 +21,7 @@ class RandomList extends Component{
           ))}
         </div>
         <div className="random-list-card-body">
-          <div className="card-title">Name: {randomPets.name}</div>
+          <div className="card-title">{randomPets.name}</div>
           <div className="card-text">
             <span className="sub-title">Age:</span> 
               {randomPets.age}
