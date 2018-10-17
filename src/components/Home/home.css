@@ -39,16 +39,16 @@
 }
 
 .heightlight-text {
+  font-family: 'karla' , sans-serif;
+  width: 75vw;
+  line-height: 1.6;
+  letter-spacing: .1em;
+  text-align: center;
   font-size: 1.4rem;
-  color:  #052a4e;
+  color:  #052a4eb1;
   order: 3;
 }
 
-.heightlight-text {
-  width: 75vw;
-  line-height: 1.6;
-  text-align: center;
-}
 
 @media screen and (min-width: 1488px) {
 
@@ -81,6 +81,7 @@
     top: 24em;
     left: 39.6em;
     width: 30vw;
+    text-align: left;
     background-color: #ffffff;
     padding: .5em 2.5em;
 
