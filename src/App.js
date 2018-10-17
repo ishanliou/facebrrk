@@ -36,7 +36,6 @@ class App extends Component {
   componentDidMount () {
     this.search()
     this.random()
-    console.log('componentdid mount')
   }
 
   search () {
